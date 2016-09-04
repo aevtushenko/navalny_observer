@@ -4,9 +4,8 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
         #map { position:absolute; top:0; bottom:0; width:100%; }
@@ -15,600 +14,82 @@
 <body>
 
 <style>
-    
-    #later {
-        display: block;
-        position: absolute;
-        margin: 0px auto;
-        width: 350px;
-        height: 40px;
-        padding: 10px;
-        border: none;
-        border-radius: 3px;
-        font-size: 12px;
-        text-align: center;
-        color: #FFF;
-        right: 100px;
-        top: 550px;
-        background: #11d7d7;
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
 </style>
 <div id='map'></div>
-<br/>
-<button onclick='later()' id='later'>Check out all the Hawker Centers Austin has been to!</button>
 <script>
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
+
 var map = new mapboxgl.Map({
     container: 'map',
-
     style: 'mapbox://styles/aevtushenko/ciq4qolya0056bwkxfx4cb2nq',
     center: [103.81256104, 1.3614899],
     zoom: 10
 });
 
-function later () {
-
-    removeLater();
-
-    map.addSource("markers", {
+map.on('load', function () {
+    // Add a GeoJSON source containing place coordinates and information.
+    map.addSource("places", {
         "type": "geojson",
         "data": {
             "type": "FeatureCollection",
             "features": [
-            
-            {
+                {
                 "type": "Feature",
+                "properties": {
+                    "description": "<p>1. Old Airport Road Food Centre <br /> 103.8858939, 1.308248</p> <p>What could I say that hasn&rsquo;t been said already? Everyone loves Old Airport Road. I tried rojak for the first time, on my first day in Singapore, here at dear Toa Payoh Rojak #01-108. In the mood for prawn noodle with pig&rsquo;s tail? Albert Street Prawn Noodle #01-10 could do you well. The pig&rsquo;s tail is optional, but I highly recommend it.</p> <p>If you go, say hello to Kallang Estate Food Centre and the wonderful bak chor mee from #01-14 next door. They don&rsquo;t get the love that they should. OAR casts a long shadow.</p> <p>First visit 19.9.11 alone<br /> - Prawn noodle with pig&rsquo;s tail from Albert Street Prawn Noodle<br /> - Satay (chicken, pork, mutton) and rice in the woven packet from Kim Satay. <br /> - Roasted chicken rice from Xin Kee Hainan Traditional Food<br /> - Rojak from Toa Payoh Rojak<br /> Second visit 26.1.13 with Ronald, Yong, and Shelagh <br /> - Rojak from Toa Payoh Rojak<br /> - Bakkwa (bagua) from Chinese character stall #01-112<br /> - Mix grill with fries and garlic sauce from Western Barbeque #01-53<br /> - Lor mee from Xin Mei Xiang Zheng Zong Lor Mee #01-118<br /> - Fried kway teow from Dong Ji Fried Kway Teow<br /> - Kway chap from Blanco Court Food Centre (3rd Storey) #01-135<br /> - Curry puff from Wang Wang Crispy Curry Puff #01-126<br /> - Tau hue from Lao Ban Soya Beancurd<br /> Third visit with parents 1.6.13<br /> - Sambal stingray and chili crab from Mattar Road Seafood Barbecue #01-63<br /> - Char kway teow from Lao Fu Zi Fried Kway Teow #01-12<br /> Fourth visit with Adri, Zula, Zach, John, Liam, Michael<br /> - Stingray from Mattar Road Seafood Barbecue #01-63<br /> - Char kway teow from Lao Fu Zi Fried Kway Teow #01-12<br /> - Kway chap, rojak, cockles from unknown stalls<br /> Fifth visit with Alan, Kenneth, and Trevor<br /> - Char kway teow from Lao Fu Zi Fried Kway Teow #01-12<br /> - Oyster egg from Xing Li Cooked Food #01-28 and from Katong Ah Soon Fried Oyster #01-07<br /> - Tau huay from Lao Ban Soya Beancurd #01-107<br /> - Rojak from Kah Ping Ri Ye Xiang #01-87<br /> - Otah from Hougang Otah #01-65<br /> - Kway chap from Blanco Court Food Centre #01-135<br /> </p>",
+                    "icon": "restaurant"
+                },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [103.8858736, 1.308261]
-                },
-                "properties": {
-                    "title": "5",
-
-
+                    "coordinates": [103.8858939, 1.308248]
                 }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8431616, 1.2827291]
-                },
-                "properties": {
-                    "title": "15",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.9351049, 1.3069031]
-                },
-                "properties": {
-                    "title": "14",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8395742, 1.3119888]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.844721, 1.280466]
-                },
-                "properties": {
-                    "title": "26",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.76446903, 1.31337345]
-                },
-                "properties": {
-                    "title": "32",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.788281, 1.3110908]
-                },
-                "properties": {
-                    "title": "21",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8080536, 1.286869]
-                },
-                "properties": {
-                    "title": "3",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8328818, 1.2850573]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8639016, 1.3031117]
-                },
-                "properties": {
-                    "title": "5",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7950995, 1.3111092]
-                },
-                "properties": {
-                    "title": "5",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7597135, 1.311838]
-                },
-                "properties": {
-                    "title": "4",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.814086, 1.324088]
-                },
-                "properties": {
-                    "title": "5",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.850654, 1.306251]
-                },
-                "properties": {
-                    "title": "4",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.9881374, 1.389472]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7132987, 1.3457251]
-                },
-                "properties": {
-                    "title": "7",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8312359, 1.292462]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.804526, 1.286343]
-                },
-                "properties": {
-                    "title": "7",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.9018286, 1.3094266]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8983491, 1.3166157]
-                },
-                "properties": {
-                    "title": "5",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.9282245, 1.325005]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8567733, 1.3074311]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8440019, 1.2857029]
-                },
-                "properties": {
-                    "title": "6",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7928353, 1.308113]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7761061, 1.3394922]
-                },
-                "properties": {
-                    "title": "3",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8466333, 1.2792236]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8549664, 1.3231094]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8665621, 1.3642125]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8603392, 1.313175]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8459278, 1.285326]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7913653, 1.2759802]
-                },
-                "properties": {
-                    "title": "4",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.764132, 1.303831]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8541162, 1.3010567]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8191433, 1.2666157]
-                },
-                "properties": {
-                    "title": "3",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.9355558, 1.3205476]
-                },
-                "properties": {
-                    "title": "2",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.738143, 1.3434368]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7311897, 1.3447913]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8502655, 1.3161213]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8430863, 1.2766004]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7979253, 1.2995647]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.822038, 1.285527]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.721519, 1.3345508]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8490756, 1.3256715]
-                },
-                "properties": {
-                    "title": "1",
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8633383, 1.3191097]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8076301, 1.2734071]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.8198513, 1.2777981]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [103.7708292, 1.3141829]
-                },
-                "properties": {
-                    "title": "1",
-
-                }
-            },
-
-
-
+            } 
             ]
         }
     });
 
+    // Add a layer showing the places.
     map.addLayer({
-        "id": "markers",
+        "id": "places",
         "type": "symbol",
-        "source": "markers",
+        "source": "places",
         "layout": {
-            "icon-image": "{marker-symbol}-15",
-            "text-field": "{title}",
-            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-            "text-offset": [0, 0],
-            "text-anchor": "top"
+            "icon-image": "{icon}-15",
+            "icon-allow-overlap": true
         }
     });
-};
+});
 
 
+// When a click event occurs near a place, open a popup at the location of
+// the feature, with description HTML from its properties.
+map.on('click', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
 
-function removeOK() {
-    var elem = document.getElementById('ok');
-    elem.parentNode.removeChild(elem);
-    return false;
-}
+    if (!features.length) {
+        return;
+    }
 
-function removeLater() {
-    var elem = document.getElementById('later');
-    elem.parentNode.removeChild(elem);
-    return false;
-}
+    var feature = features[0];
 
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    var popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.description)
+        .addTo(map);
+});
+
+// Use the same approach as above to indicate that the symbols are clickable
+// by changing the cursor style to 'pointer'.
+map.on('mousemove', function (e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['places'] });
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+});
 </script>
 
 </body>
