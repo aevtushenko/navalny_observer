@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.25.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style>
+.marker {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+}
+</style>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
+var geojson = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+                "type": "Feature",
+                "properties": {
+                
+                    "description": "<b>Old Airport Road</b><br><p>What could I say that hasn&rsquo;t been said already? Everyone loves Old Airport Road. I tried rojak for the first time, on my first day in Singapore, here at dear Toa Payoh Rojak #01-108. In the mood for prawn noodle with pig&rsquo;s tail? Albert Street Prawn Noodle #01-10 could do you well. The pig&rsquo;s tail is optional, but I highly recommend it.</p><p>If you go, say hello to Kallang Estate Food Centre and the wonderful bak chor mee from #01-14 next door. They don&rsquo;t get the love that they should. OAR casts a long shadow.</p>",
+                    "icon": "restaurant"
+                    
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [103.8858939, 1.308248]
+                }
+            },
+{
+                "type": "Feature",
+                "properties": {
+                    
+                    "description": "<b>Chinatown Complex / Chinatown Smith Street</b><br><p>Holy mackerel this sucker is huge. It&rsquo;s the biggest in the country, if I&rsquo;m not wrong. Four colour-coded sections, multiple craft beer stalls, at least two double-wide stalls specializing in steamed fish head, and the world&rsquo;s first Michelin-starred street food establishment? It&rsquo;s all here.</p><p>Don&rsquo;t miss starchy steamed things from Jia Ji Mei Shi #02-168, fish head with fermented bean, black bean, or hot sauce from An Ji #02-193, or that barrier-shattering soya sauce chicken.</p>",
+                    "icon": "restaurant"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [103.843098, 1.282573]
+                }
+            },
+{
+                "type": "Feature",
+                "properties": {
+                    
+                    "description": "<b>East Coast Lagoon</b><br><p>The setting, the food, and the highly diverse clientele conspire to make a meal at East Coast Lagoon a top-notch Singaporean affair. You can tell your friends visiting from out of town that the ships they see waiting to come into port make for the most tangible representation of macroeconomic activity you know&#8230; unless you know a better one.</p><p>For food? Some of the best oyster egg in the country can be had at Song Kee Fried Oyster #01-15. The wings from Ah Hwee BBQ Chicken Wings &amp; Spring Chicken, #14, are top notch. I take no issue with the good things people say about Roxy Laksa #48. It&rsquo;s cockles, my friends, blood cockles, &lsquo;hum&rsquo; in dialect, that rise to the top of my list of foods most at home at East Cost. They were meant to be eaten with a view of the water. Order them half cooked from BBQ Seafood Kitchen #4, or compare the half cooked to the full. They&rsquo;re bloodier and more wild and wonderful when they&rsquo;re squishily rare.</p>",
+                    "icon": "restaurant"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [103.935039, 1.30668]
+                }
+            },
+{
+                "type": "Feature",
+                "properties": {
+                   
+                    "description": "<b>Newton</b><br><p>Oyster egg from Hup Kee Fried Oyster Omelette #01-73 hits the spot, as does Newton&rsquo;s central location. It&rsquo;s less commercial and touristic than it was when I first moved to SG, too: many fewer hawkers jumped out at me with picture menus on my most recent visit than when I first went in late 2011.</p>",
+                    "icon": "restaurant"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [103.839179, 1.312041]
+                }
+            },
+{
+                "type": "Feature",
+                "properties": {
+                   
+                    "description": "<b>Maxwell</b><br><p>An old standby, an original, and a flag-bearer for Singapore hawker food: Maxwell&rsquo;s place in the sun is secure. Ask the uncle at China Street Fritters #64 what&rsquo;s the difference between Hokkien and Teochew ngoh hiang (spoiler: the Hokkien version lacks the distinctive Teochew prawn cracker, hei piah). Track down Maxwell Fuzhou Oyster Cake #5 and get, well, an oyster cake. It&rsquo;s not even the most famous porridge place at Maxwell &ndash; that&rsquo;d be Zhen Zhen Porridge #54 - but Ho Kee Poridge #45 is my go-to for century egg and pork gruel, mid-day or late-night.</p><p>Now let&rsquo;s talk about Tian Tian (#10/11). Of all the hawker foods, chicken rice is primary. Of all the food centre chicken rice joints, Tian Tian is the most renowned (Boon Tong Kee and Wee Nam Kee have their proponents, but I&rsquo;m not concerned with brick-and-mortar right now). I&rsquo;m a Tian Tian believer. What you&rsquo;re looking for in white chicken is lots of jelly underneath the skin; TT delivers the goods. Beware that most Singaporeans will tell you it&rsquo;s the rice and the chili that make or break the &#28023;&#21335;&#40481;&#39277; experience. Tian Tian scores well in both categories.</p><p>I&rsquo;ll take this opportunity to plug the URA City Gallery next door, a must-visit elaboration on Singaporean urbanism complete with giant scale models of SG&rsquo;s downtown and &ndash; get this &ndash; a scale model of the entire country, minus Pulau Ubin and Tekong. It&rsquo;s amazing.</p>",
+                    "icon": "restaurant"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [103.844915, 1.280092]
+                }
+            }
+    ]
+};
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/aevtushenko/ciq4qolya0056bwkxfx4cb2nq',
+    center: [103.81256104, 1.3614899],
+    zoom: 10
+});
+
+// add markers to map
+geojson.features.forEach(function(marker) {
+    // create a DOM element for the marker
+    var el = document.createElement('div');
+    el.className = 'marker';
+    
+
+    
+    });
+
+    // add marker to map
+    new mapboxgl.Marker(el, {offset: [-marker.properties.iconSize[0] / 2, -marker.properties.iconSize[1] / 2]})
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+});
+</script>
+
+</body>
+</html>
