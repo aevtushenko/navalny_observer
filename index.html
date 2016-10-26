@@ -29,15 +29,14 @@
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
 var filters = document.getElementById('filters');
-var geojson = [
-  {
+var geojson = [{
     type: 'Feature',
     geometry: {
       type: 'Point',
       coordinates: [103.8858939, 1.308248]
     },
     properties: {
-      "description": "<h3><b>Old Airport Road</b></h3><p><i>Blk 51 Old Airport Road, 390051</i></p><p>An all-time great, this one.</p><p>Do not overlook <b>Blanco Court Food Centre #01-135</b> (it&rsquo;s a stall, in fact, not a meta-style food centre within a food centre). They do kway chap awfully well. You&rsquo;ll likely encounter a queue. Embrace it. These intestines are top-notch.</p><p><b>Toa Payoh Rojak #01-108</b> mixes it with the best of them; very thick, this one. I ventured out to Old Airport Road on my first day in Singapore, 19 September, 2011, and treated myself to this stuff. Good call. </p><p>Duelling CKT stalls? Yes, please. <b>Dong Ji Fried Kway Teow #01-138</b> and <b>Lao Fu Zi Fried Kway Teow #01-12</b> (LFZ is the more prominent with the psychedelic purple/green sign) deliver the goods.</p><p>Some say the chili crab from <b>Mattar Road Seafood Barbecue #01-63</b> is some of the best in the country. I&rsquo;m inclined to agree with them.</p><p>Pig&rsquo;s tail prawn noodle from <b>Albert Street Prawn Noodle #01-10</b> could do you well, too.</p><p>When you go to OAR, say hello to Kallang Estate next door and the wonderful bak chor mee from <b>&#22823;&#40060;&#22278;&#32933;&#32905;&#33054;&#38754; #01-14</b>. They don&rsquo;t get the love that they should. OAR casts a long shadow.</p>",
+      "description": "<b>OLD AIRPORT ROAD</b><p><b><i>Blk 51 Old Airport Road, 390051</i></b></p><p>Do not overlook <b>Blanco Court Food Centre #01-135</b> (it&rsquo;s a stall, in fact, not a meta-style food centre within a food centre). They do kway chap awfully well. You&rsquo;ll likely encounter a queue. Embrace it. These intestines are top-notch.</p><p><b>Toa Payoh Rojak #01-108</b> mixes it with the best of them; very thick, this one. I ventured out to Old Airport Road on my first day in Singapore, 19 September, 2011, and treated myself to this stuff. Good call. </p><p>Duelling CKT stalls? Yes, please. <b>Dong Ji Fried Kway Teow #01-138</b> and <b>Lao Fu Zi Fried Kway Teow #01-12</b> (LFZ is the more prominent with the psychedelic purple/green sign) deliver the goods.</p><p>Some say the chili crab from <b>Mattar Road Seafood Barbecue #01-63</b> is some of the best in the country. I&rsquo;m inclined to agree with them.</p><p>Pig&rsquo;s tail prawn noodle from <b>Albert Street Prawn Noodle #01-10</b> could do you well, too.</p><p>When you go to OAR, say hello to Kallang Estate next door and the wonderful bak chor mee from <b>&#22823;&#40060;&#22278;&#32933;&#32905;&#33054;&#38754; #01-14</b>. They don&rsquo;t get the love that they should. OAR casts a long shadow.</p>",
       'marker-color': '#2721D6',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -50,8 +49,34 @@ var geojson = [
       coordinates: [103.843098, 1.282573]
     },
     properties: {
-      "description": "<h3><b>Chinatown Complex</b></h3><p><i>Blk 335 Smith Street, 050335</i></p><p>Holy mackerel this sucker is huge. It&rsquo;s the largest food centre in the country, if I&rsquo;m not wrong. Four colour-coded sections, a few craft beer stalls, and the infamous Michelin-starred <b>Liao Fan Hong Kong Soya Sauce Chicken Rice &amp; Noodle #02- 126</b> (the chicken is very tasty and I enjoy epic queues, so yes, you should go). But there&rsquo;s more&#8230; </p><p>Don&rsquo;t miss starchy steamed things from <b>Jia Ji Mei Shi #02-168</b>. They used to make a mean plate of raw fish &ndash; SG&rsquo;s best beer snack, in my book &ndash; but I&rsquo;m not sure they&rsquo;ve brought it back after that odd bacteria scare and resultant island-wide moratorium. If they&rsquo;re selling, you&rsquo;re in luck!</p><p>It&rsquo;s hard to say whether <b>Cheng Ji #02-190/191</b> or <b>An Ji #02-193/194</b> swims the anchor leg of the steamed fish head relay around these parts. If you stick with Cheng, a &ldquo;Song&rdquo; head does the trick. If you pull for An, you&rsquo;ll find their heads do well in fermented bean, black bean, or hot sauce.</p><p>Now, beer. One side of the centre overlooks bona fide Chinatown hustle-bustle. The view and the energy pair perfectly with a couple of brews. How fitting! <b>The Good Beer Company #02-58</b> and <b>Smith Street Taps #02-62</b> serve a cosmopolitan crowd a fine and wide array. A terrific little treasure.</p>",
+      "description": "<b>CHINATOWN COMPLEX</b><p><b><i>Blk 335 Smith Street, 050335</i></b></p><p>Holy mackerel this sucker is huge. It&rsquo;s the largest food centre in the country, if I&rsquo;m not wrong. Four colour-coded sections, a few craft beer stalls, and the infamous Michelin-starred <b>Liao Fan Hong Kong Soya Sauce Chicken Rice &amp; Noodle #02- 126</b> (the chicken is very tasty and epic queues are fun, so yes, you should go). But there&rsquo;s more&#8230; </p><p>Don&rsquo;t miss starchy steamed things from <b>Jia Ji Mei Shi #02-168</b>. They used to make a mean plate of raw fish &ndash; SG&rsquo;s best beer snack, in my book &ndash; but I&rsquo;m not sure they&rsquo;ve brought it back after that odd bacteria scare and resultant island-wide moratorium. If they&rsquo;re selling, you&rsquo;re in luck!</p><p>It&rsquo;s hard to say whether <b>Cheng Ji #02-190/191</b> or <b>An Ji #02-193/194</b> swims the anchor leg of the steamed fish head relay around these parts. If you stick with Cheng, a &ldquo;Song&rdquo; head does the trick. If you pull for An, you&rsquo;ll find their heads do well in fermented bean, black bean, or hot sauce.</p><p>Now, beer. One side of the centre overlooks bona fide Chinatown hustle-bustle. The view and the energy pair perfectly with a couple of brews. How fitting! <b>The Good Beer Company #02-58</b> and <b>Smith Street Taps #02-62</b> serve a cosmopolitan crowd a fine and wide array. A terrific little treasure.</p>",
       'marker-color': '#7C09B0',
+      'marker-size': 'medium',
+      'marker-symbol': 'restaurant'
+    }
+  },
+{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [103.935039, 1.30668]
+    },
+    properties: {
+      "description": "<b>EAST COAST LAGOON</b><p><b><i>1220 East Coast Parkway, 468960</i></b></p><p>You&rsquo;ll find some of the best oyster egg in the country at <b>Song Kee Fried Oyster #15</b>. The gentlemen who run this place must be brothers. Appears that they communicate telepathically.</p><p>The wings from <b>Ah Hwee BBQ Chicken Wings &amp; Spring Chicken, #14</b> are excellent. </p><p>I admire <b>Defu #19</b> for obvious reasons. Anybody who can run a successful food business selling only spiced ground fish grilled in leaves has got to be pretty shrewd. Also, you say &ldquo;otah&rdquo; or &ldquo;otak otak&rdquo;, folks, but &ldquo;otah otah&rdquo; is just odd and &ldquo;otak&rdquo; means brains in Malay. If you&rsquo;re looking for mutton brain soup at a sup kambing stall, then &ldquo;otak&rdquo; is spot-on.</p><p>Conventional wisdom is that <b>Haron Satay #55</b> is the best on the East Coast satay stretch. It&rsquo;s very good, but I prefer <b>Satay Power #6</b> at Boon Tat St. alongside Lau Pa Sat. I wanna give &lsquo;em a shout out here since Lau Pa Sat doesn&rsquo;t make the official hawker centre cut. But ask the Haron guys if they serve babat (tripe). If they do, game changer, man.</p><p>Truly, though, it&rsquo;s cockles, my friends &ndash; &lsquo;hum&rsquo; in dialect &ndash; that rise to the top of my list of essential East Coast edibles. They were meant to be eaten with a view of the water. Order them half cooked from <b>BBQ Seafood Kitchen #4</b> or <b>East Coast BBQ Seafood #60</b>. Compare the half cooked to the full, if you like. They&rsquo;re bloodier and more wild and wonderful when they&rsquo;re squishily rare. Of course, sambal stingray and baby kai lan also can.</p><p>By the way, I take no issue with the good things people say about <b>Roxy Laksa #48</b>, but I&rsquo;ve been disappointed by <b>Lagoon Leng Kee Beef Kway Teow #33</b>.</p>",
+      'marker-color': '#FF0067',
+      'marker-size': 'medium',
+      'marker-symbol': 'restaurant'
+    }
+  },
+{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [103.839179, 1.312041]
+    },
+    properties: {
+      "description": "<b>NEWTON</b><p><b><i>500 Clemenceau Ave North, 229495</i></b></p><p>Oyster egg from <b>Hup Kee Fried Oyster Omelette #01-73</b> hits the spot, as does Newton&rsquo;s central location. It&rsquo;s less commercial and touristic than it was in 2011/12, too: many fewer hawkers jumped out at me with picture menus on my most recent visit than when I first went.</p>",
+      'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
     }
