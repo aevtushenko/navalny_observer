@@ -1450,7 +1450,7 @@ var geojson = [
 ];
 
 var mapSimple = L.mapbox.map('map_simple', 'mapbox.streets')
-  .setView([1.3614899, 103.81256104], 11);
+  .setView([1.355, 103.81256104], 12);
 var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapSimple);
 myLayer.on('ready', function(e) {
   var typesObj = {},
