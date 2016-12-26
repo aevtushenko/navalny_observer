@@ -76,6 +76,19 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
 var filters = document.getElementById('filters');
 var geojson = [
+ {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [103.98710079999996,1.3544202]
+    },
+    properties: {
+      "description": "Thanks for visiting! My name is Austin Shiner, and this is a map of every one of Singapore’s 108 hawker centres. <a href='http://singaporerecords.com/first-person-to-have-eaten-at-every-singapore-hawker-centre-2/' target='blank'>I’ve eaten at all of them.</a><br><br>From September 19th, 2011, to August 19th, 2016, I lived in Singapore and worked at Yale-NUS College. I now live in Taipei, and as much as I love intestine mee sua, lu wei, and beef noodle, I miss my bak chor mee and kway chap.<br><br>An important definition: all hawker centres are government-owned and all but two are directly managed by the National Environment Agency. This is by no means a comprehensive hawker map, as it does not include favourites from privately-owned coffee shops or brick-and-mortar restaurants. Note that there isn’t a hawker centre at Changi Airport. This is purely orientation.",
+      'marker-color': '#FB3F00',
+      'marker-size': 'large',
+      'marker-symbol': 'star-stroked'
+    }
+  },
 {
     type: 'Feature',
     geometry: {
@@ -96,7 +109,7 @@ var geojson = [
       coordinates: [103.843098, 1.282573]
     },
     properties: {
-      "description": "<b>Chinatown Complex</b><br><i>Blk 335 Smith Street, 050335</i><hr>Holy mackerel this sucker is huge. It&rsquo;s the largest food centre in the country, if I&rsquo;m not wrong. Four colour-coded sections, a few craft beer stalls, and the infamous Michelin-starred <b>Liao Fan Hong Kong Soya Sauce Chicken Rice &amp; Noodle #02- 126</b> (the chicken is very tasty and epic queues are fun, so yes, you should go). But there&rsquo;s more&#8230; <br><br>Don&rsquo;t miss starchy steamed things from <b>Jia Ji Mei Shi #02-168</b>. They used to make a mean plate of raw fish &ndash; SG&rsquo;s best beer snack, in my book &ndash; but I&rsquo;m not sure they&rsquo;ve brought it back after that odd bacteria scare and resultant island-wide moratorium. If they&rsquo;re selling, you&rsquo;re in luck!<br><br>It&rsquo;s hard to say whether <b>Cheng Ji #02-190/191</b> or <b>An Ji #02-193/194</b> swims the anchor leg of the steamed fish head relay around these parts. If you stick with Cheng, a &ldquo;Song&rdquo; head does the trick. If you pull for An, you&rsquo;ll find their heads do well in fermented bean, black bean, or hot sauce.<br><br>Now, beer. One side of the centre overlooks bona fide Chinatown hustle-bustle. The view and the energy pair perfectly with a couple of brews. How fitting! <b>The Good Beer Company #02-58</b> and <b>Smith Street Taps #02-62</b> serve a cosmopolitan crowd a fine and wide array. A terrific little treasure.",
+      "description": "<b>Chinatown Complex</b><br><i>Blk 335 Smith Street, 050335</i><br><a href='https://www.youtube.com/watch?v=Po3sh216d-I' target='_blank'>The Great Singapore Hawker Countdown: 6 more days, 12 more hawker centres</a><hr>Holy mackerel this sucker is huge. It&rsquo;s the largest food centre in the country, if I&rsquo;m not wrong. Four colour-coded sections, a few craft beer stalls, and the infamous Michelin-starred <b>Liao Fan Hong Kong Soya Sauce Chicken Rice &amp; Noodle #02- 126</b> (the chicken is very tasty and epic queues are fun, so yes, you should go). But there&rsquo;s more&#8230; <br><br>Don&rsquo;t miss starchy steamed things from <b>Jia Ji Mei Shi #02-168</b>. They used to make a mean plate of raw fish &ndash; SG&rsquo;s best beer snack, in my book &ndash; but I&rsquo;m not sure they&rsquo;ve brought it back after that odd bacteria scare and resultant island-wide moratorium. If they&rsquo;re selling, you&rsquo;re in luck!<br><br>It&rsquo;s hard to say whether <b>Cheng Ji #02-190/191</b> or <b>An Ji #02-193/194</b> swims the anchor leg of the steamed fish head relay around these parts. If you stick with Cheng, a &ldquo;Song&rdquo; head does the trick. If you pull for An, you&rsquo;ll find their heads do well in fermented bean, black bean, or hot sauce.<br><br>Now, beer. One side of the centre overlooks bona fide Chinatown hustle-bustle. The view and the energy pair perfectly with a couple of brews. How fitting! <b>The Good Beer Company #02-58</b> and <b>Smith Street Taps #02-62</b> serve a cosmopolitan crowd a fine and wide array. A terrific little treasure.",
       'marker-color': '#7C09B0',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -109,7 +122,7 @@ var geojson = [
       coordinates: [103.935039, 1.30668]
     },
     properties: {
-      "description": "<b>East Coast Lagoon</b><br><i>1220 East Coast Parkway, 468960</i><br><a href='https://www.youtube.com/watch?v=YMALpr-W5XE=43s' target='_blank'>The Great Singapore Hawker Countdown: 12 more days, 18 more hawker centres</a><hr>You&rsquo;ll find some of the best oyster egg in the country at <b>Song Kee Fried Oyster #15</b>. The gentlemen who run this place must be brothers. Appears that they communicate telepathically.<br><br>The wings from <b>Ah Hwee BBQ Chicken Wings &amp; Spring Chicken, #14</b> are excellent. <br><br>I admire <b>Defu #19</b> for obvious reasons. Anybody who can run a successful food business selling only spiced ground fish grilled in leaves has got to be pretty shrewd. Also, you say &ldquo;otah&rdquo; or &ldquo;otak otak&rdquo;, folks, but &ldquo;otah otah&rdquo; is just odd and &ldquo;otak&rdquo; means brains in Malay. If you&rsquo;re looking for mutton brain soup at a sup kambing stall, then &ldquo;otak&rdquo; is spot-on.<br><br>Conventional wisdom is that <b>Haron Satay #55</b> is the best on the East Coast satay stretch. It&rsquo;s very good, but I prefer <b>Satay Power #6</b> at Boon Tat St. alongside Lau Pa Sat. I wanna give &lsquo;em a shout out here since Lau Pa Sat doesn&rsquo;t make the official hawker centre cut. But ask the Haron guys if they serve babat (tripe). If they do, game changer, man.<br><br>Truly, though, it&rsquo;s cockles, my friends &ndash; &lsquo;hum&rsquo; in dialect &ndash; that rise to the top of my list of essential East Coast edibles. They were meant to be eaten with a view of the water. Order them half cooked from <b>BBQ Seafood Kitchen #4</b> or <b>East Coast BBQ Seafood #60</b>. Compare the half cooked to the full, if you like. They&rsquo;re bloodier and more wild and wonderful when they&rsquo;re squishily rare. Of course, sambal stingray and baby kai lan also can.<br><br>By the way, I take no issue with the good things people say about <b>Roxy Laksa #48</b>.",
+      "description": "<b>East Coast Lagoon</b><br><i>1220 East Coast Parkway, 468960</i><br><a href='https://www.youtube.com/watch?v=YMALpr-W5XE&feature=youtu.be&t=43s' target='_blank'>The Great Singapore Hawker Countdown: 12 more days, 18 more hawker centres</a><hr>You&rsquo;ll find some of the best oyster egg in the country at <b>Song Kee Fried Oyster #15</b>. The gentlemen who run this place must be brothers. Appears that they communicate telepathically.<br><br>The wings from <b>Ah Hwee BBQ Chicken Wings &amp; Spring Chicken, #14</b> are excellent. <br><br>I admire <b>Defu #19</b> for obvious reasons. Anybody who can run a successful food business selling only spiced ground fish grilled in leaves has got to be pretty shrewd. Also, you say &ldquo;otah&rdquo; or &ldquo;otak otak&rdquo;, folks, but &ldquo;otah otah&rdquo; is just odd and &ldquo;otak&rdquo; means brains in Malay. If you&rsquo;re looking for mutton brain soup at a sup kambing stall, then &ldquo;otak&rdquo; is spot-on.<br><br>Conventional wisdom is that <b>Haron Satay #55</b> is the best on the East Coast satay stretch. It&rsquo;s very good, but I prefer <b>Satay Power #6</b> at Boon Tat St. alongside Lau Pa Sat. I wanna give &lsquo;em a shout out here since Lau Pa Sat doesn&rsquo;t make the official hawker centre cut. But ask the Haron guys if they serve babat (tripe). If they do, game changer, man.<br><br>Truly, though, it&rsquo;s cockles, my friends &ndash; &lsquo;hum&rsquo; in dialect &ndash; that rise to the top of my list of essential East Coast edibles. They were meant to be eaten with a view of the water. Order them half cooked from <b>BBQ Seafood Kitchen #4</b> or <b>East Coast BBQ Seafood #60</b>. Compare the half cooked to the full, if you like. They&rsquo;re bloodier and more wild and wonderful when they&rsquo;re squishily rare. Of course, sambal stingray and baby kai lan also can.<br><br>By the way, I take no issue with the good things people say about <b>Roxy Laksa #48</b>.",
       'marker-color': '#7C09B0',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -148,7 +161,7 @@ var geojson = [
       coordinates: [103.764506, 1.313218]
     },
     properties: {
-      "description": "<b>Clementi Ave 3 Blk 448</b><br><i>Blk 448 Clementi Ave 3, 120448</i><hr>Clementi 448&rsquo;s convenience to Yale-NUS College in no way detracts from the scrumptiousness of beef hor fun from <b>Kee Hock Hor Fun #01-43</b> or pork porridge from <b>Soon Lee Poridge #01-50</b>. The former shines despite the pre-fab noodles. Gotta load up on the pickled green chili. The latter &ndash; of Hainanese bent, I&rsquo;m told &ndash; is as dynamic as porridge gets. Order it with egg and do not be deterred by a 15-20-minute wait.<br><br>The stuff at <b>Fried Carrot Cake #01-45</b> is so good that they&rsquo;re reliably out and closed by 11am. Maybe 10am. Could be 9am. Get there at dawn, if you can, and buy some fish heads for dinner at the wet market.<br><br>Some of the best kopi I&rsquo;ve had is <b>Coffee Kid #01-30</b> kopi. Thick and rich. Order kopi gau, or better yet, get this stuff di lo, aka extra extra potent. But don&rsquo;t order kopi o kosong di lo. That stuff tastes like motor oil. <br><br>I&rsquo;d like to go on record asserting the value of chain stalls <b>Pontian Wanton Noodle #01-48</b> and <b>Bedok Chwee Kueh #01-32</b>. They&rsquo;re generic by definition. So what. Pontian noodles are good noodles and I scarcely ever met a chwee kueh &ndash; named for the dimple of water that collects in the middle during steaming &ndash; that I didn&rsquo;t like.",
+      "description": "<b>Clementi Ave 3 Blk 448</b><br><i>Blk 448 Clementi Ave 3, 120448</i><br><a href='https://www.youtube.com/watch?v=9qrJN95CPNE' target='_blank'>The Great Singapore Hawker Countdown: 13 more days, 18 more hawker centres</a><hr>Clementi 448&rsquo;s convenience to Yale-NUS College in no way detracts from the scrumptiousness of beef hor fun from <b>Kee Hock Hor Fun #01-43</b> or pork porridge from <b>Soon Lee Poridge #01-50</b>. The former shines despite the pre-fab noodles. Gotta load up on the pickled green chili. The latter &ndash; of Hainanese bent, I&rsquo;m told &ndash; is as dynamic as porridge gets. Order it with egg and do not be deterred by a 15-20-minute wait.<br><br>The stuff at <b>Fried Carrot Cake #01-45</b> is so good that they&rsquo;re reliably out and closed by 11am. Maybe 10am. Could be 9am. Get there at dawn, if you can, and buy some fish heads for dinner at the wet market.<br><br>Some of the best kopi I&rsquo;ve had is <b>Coffee Kid #01-30</b> kopi. Thick and rich. Order kopi gau, or better yet, get this stuff di lo, aka extra extra potent. But don&rsquo;t order kopi o kosong di lo. That stuff tastes like motor oil. <br><br>I&rsquo;d like to go on record asserting the value of chain stalls <b>Pontian Wanton Noodle #01-48</b> and <b>Bedok Chwee Kueh #01-32</b>. They&rsquo;re generic by definition. So what. Pontian noodles are good noodles and I scarcely ever met a chwee kueh &ndash; named for the dimple of water that collects in the middle during steaming &ndash; that I didn&rsquo;t like.",
       'marker-color': '#2721D6',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -252,7 +265,7 @@ var geojson = [
       coordinates: [103.850551, 1.306197]
     },
     properties: {
-      "description": "<b>Tekka</b><br><i>Blk 665 Buffalo Road, 210665</i><hr>Tekka is life. It&rsquo;s full of it, is what I mean to say, flavour and aroma and kinetic energy. You couldn&rsquo;t run a self-respecting hawker centre in Little India any other way, for it really ought to mirror its sharp, pluralistic, cavorting environment. Is the biryani here that great? If you ask the proprietor of Bismillah Biryani, not at all. And he might be right that Bismillah does it best, but that doesn&rsquo;t mean that mee goreng or sup lidah (tongue baby!) from <b>Samad&rsquo;s Tekka Dum Briyani #01-261</b> isn&rsquo;t terrific. I&rsquo;d like to note, too, that I bought a whole lamb from the wet market section here once. This is a place of opportunity.",
+      "description": "<b>Tekka</b><br><i>Blk 665 Buffalo Road, 210665</i><br><a href='https://www.youtube.com/watch?v=w8vnxwIV7sw&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 8 more days, 14 more hawker centres</a><hr>Tekka is life. It&rsquo;s full of it, is what I mean to say, flavour and aroma and kinetic energy. You couldn&rsquo;t run a self-respecting hawker centre in Little India any other way, for it really ought to mirror its sharp, pluralistic, cavorting environment. Is the biryani here that great? If you ask the proprietor of Bismillah Biryani, not at all. And he might be right that Bismillah does it best, but that doesn&rsquo;t mean that mee goreng or sup lidah (tongue baby!) from <b>Samad&rsquo;s Tekka Dum Briyani #01-261</b> isn&rsquo;t terrific. I&rsquo;d like to note, too, that I bought a whole lamb from the wet market section here once. This is a place of opportunity.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -382,7 +395,7 @@ var geojson = [
       coordinates: [103.792731, 1.308133]
     },
     properties: {
-      "description": "<b>Holland Drive</b><br><i>Blk 44 Holland Drive, 270044</i><hr>It could safely be said that no single stall dominates its host hawker centre more than <b>New Lucky Claypot Rice #01-19</b> dominates Holland Drive. One of the most famous charcoal-fired claypot rice establishments in the city draws hungry throngs well after nearly every other stall in its immediate vicinity has shut down. The sausage is great, the chicken is great, the blackened rice on the bottom of the pot is great, and the double-barrelled application of dark sauce and oil is a joy. I shouldn&rsquo;t ignore the regular old rice away from the pot&rsquo;s scalding sides, for it&rsquo;s also&#8230; wait for it&#8230; great. You&rsquo;ll likely stand up from the table and trundle away nursing a terrible food coma, but no matter.",
+      "description": "<b>Holland Drive</b><br><i>Blk 44 Holland Drive, 270044</i><br><a href='https://www.youtube.com/watch?v=qj8WSCQiqAg&feature=youtu.be&t=176s' target='_blank'>The Great Singapore Hawker Countdown: 19 more days, 20 more hawker centres</a><hr>It could safely be said that no single stall dominates its host hawker centre more than <b>New Lucky Claypot Rice #01-19</b> dominates Holland Drive. One of the most famous charcoal-fired claypot rice establishments in the city draws hungry throngs well after nearly every other stall in its immediate vicinity has shut down. The sausage is great, the chicken is great, the blackened rice on the bottom of the pot is great, and the double-barrelled application of dark sauce and oil is a joy. I shouldn&rsquo;t ignore the regular old rice away from the pot&rsquo;s scalding sides, for it&rsquo;s also&#8230; wait for it&#8230; great. You&rsquo;ll likely stand up from the table and trundle away nursing a terrible food coma, but no matter.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -408,7 +421,7 @@ var geojson = [
       coordinates: [103.84671200000003, 1.279376]
     },
     properties: {
-      "description": "<b>Amoy Street</b><br><i>National Development Building, Annex B, Telok Ayer Street, 069111</i><hr>What. A. Circus. Set in the beating heart of SG&rsquo;s downtown core, Amoy is overrun with office workers during the lunch rush. I&rsquo;m going to tell you a story. The first time I actually ordered food at Amoy &ndash; I&rsquo;d been deterred by insane queues before &ndash; I spent so long trying to find a seat that I eventually gave up, put my tempting mee pok from <b>Ah Ter Teochew Fish Ball Noodles #01-47</b> on the cleaner&rsquo;s cart, took a few bites right there, and left. I was a sweaty, flustered mess. Lesson learned that day: never tackle Amoy alone, unless you visit outside the lunch hour. It&rsquo;s a full-time job trying to chope a table. Don&rsquo;t think that everyone in your party can queue first and you&rsquo;ll be able to stumble on seating later. Enjoy the madness, and don&rsquo;t overlook the upper level!<br><br>When Michelin&rsquo;s Singapore guide debuted in 2016, Amoy pulled in by far the most &ldquo;Bib Gourmand&rdquo; awards, which aim to recognize informal down-market eateries, of any food centre. <b>A Noodle Story #01-39</b> was one of them, and deservedly so. Singapore-style ramen, so they say, and it&rsquo;s a convincing bowl.<br><br><b>Hoo Kee Rice Dumpling #01-18</b> made Michelin&rsquo;s list, too, as did <b>Famous Crispy Curry Puff #01-21</b>. Both very tasty.",
+      "description": "<b>Amoy Street</b><br><i>National Development Building, Annex B, Telok Ayer Street, 069111</i><br><a href='https://www.youtube.com/watch?v=zXx85tZeVvc&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 23 more days, 33 more hawker centres</a><hr>What. A. Circus. Set in the beating heart of SG&rsquo;s downtown core, Amoy is overrun with office workers during the lunch rush. I&rsquo;m going to tell you a story. The first time I actually ordered food at Amoy &ndash; I&rsquo;d been deterred by insane queues before &ndash; I spent so long trying to find a seat that I eventually gave up, put my tempting mee pok from <b>Ah Ter Teochew Fish Ball Noodles #01-47</b> on the cleaner&rsquo;s cart, took a few bites right there, and left. I was a sweaty, flustered mess. Lesson learned that day: never tackle Amoy alone, unless you visit outside the lunch hour. It&rsquo;s a full-time job trying to chope a table. Don&rsquo;t think that everyone in your party can queue first and you&rsquo;ll be able to stumble on seating later. Enjoy the madness, and don&rsquo;t overlook the upper level!<br><br>When Michelin&rsquo;s Singapore guide debuted in 2016, Amoy pulled in by far the most &ldquo;Bib Gourmand&rdquo; awards, which aim to recognize informal down-market eateries, of any food centre. <b>A Noodle Story #01-39</b> was one of them, and deservedly so. Singapore-style ramen, so they say, and it&rsquo;s a convincing bowl.<br><br><b>Hoo Kee Rice Dumpling #01-18</b> made Michelin&rsquo;s list, too, as did <b>Famous Crispy Curry Puff #01-21</b>. Both very tasty.",
       'marker-color': '#7C09B0',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -551,7 +564,7 @@ var geojson = [
       coordinates: [103.84992799999998, 1.316263]
     },
     properties: {
-      "description": "<b>Pek Kio</b><br><i>Blk 41A Cambridge Road, 211041</i><hr>It was only in my last handful of months in Singapore that the brilliance of Pek Kio revealed itself to me. It&rsquo;s tucked in there by Farrer Park MRT just deep enough that you wouldn&rsquo;t pick it up on your radar without a tipoff. Shout it from the mountaintops! Pek Kio is legit. We&rsquo;re talking old-school food centre detailing here, people. You know those semi-circular grating-like things you see above the stalls at a select few hawker centres these days? Pek Kio&rsquo;s got &lsquo;em. Now, if you would take me at my word, I&rsquo;d tell you that <b>Pin Wei Hong Kong Style Chee Cheong Fun #01-25</b> delivered unto me the single most delightful plate of chee cheong fun &ndash; scallop!! &ndash; I&rsquo;ve ever known, and that includes the several hundred calories worth I&rsquo;ve ingested at HK dim sum establishments.<br><br>What can I say about <b>Wah Kee Big Prawn Noodles #01-15</b> except that we&rsquo;re dealing with seriously shrimpy broth here.<br><br>Shout-out to the very tasty <b>Sheng Seng Fried Prawn Noodles #01-40</b>.",
+      "description": "<b>Pek Kio</b><br><i>Blk 41A Cambridge Road, 211041</i><br><a href='https://www.youtube.com/watch?v=YMALpr-W5XE&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 12 more days, 18 more hawker centres</a><hr>It was only in my last handful of months in Singapore that the brilliance of Pek Kio revealed itself to me. It&rsquo;s tucked in there by Farrer Park MRT just deep enough that you wouldn&rsquo;t pick it up on your radar without a tipoff. Shout it from the mountaintops! Pek Kio is legit. We&rsquo;re talking old-school food centre detailing here, people. You know those semi-circular grating-like things you see above the stalls at a select few hawker centres these days? Pek Kio&rsquo;s got &lsquo;em. Now, if you would take me at my word, I&rsquo;d tell you that <b>Pin Wei Hong Kong Style Chee Cheong Fun #01-25</b> delivered unto me the single most delightful plate of chee cheong fun &ndash; scallop!! &ndash; I&rsquo;ve ever known, and that includes the several hundred calories worth I&rsquo;ve ingested at HK dim sum establishments.<br><br>What can I say about <b>Wah Kee Big Prawn Noodles #01-15</b> except that we&rsquo;re dealing with seriously shrimpy broth here.<br><br>Shout-out to the very tasty <b>Sheng Seng Fried Prawn Noodles #01-40</b>.",
       'marker-color': '#7C09B0',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -577,7 +590,7 @@ var geojson = [
       coordinates: [103.79770800000006, 1.299438]
     },
     properties: {
-      "description": "<b>Commonwealth Drive Blks 1A/2A/3A</b><br><i>Commonwealth Drive Blks 1A/2A/3A, 141001/141002/141003</i><hr>You could argue that what I&rsquo;m about to do would represent an abandonment of journalistic principle. On the basis of a single stall&rsquo;s resolute and unequivocal deliciousness, I hereby establish Blks 1A/2A/3A Commonwealth Drive (Tanglin Halt B) one of SG&rsquo;s tastiest food centres. I&rsquo;m not proud, but I&rsquo;m equally unapologetic. Such is my devotion to thunder tea rice, one of the most underrated hawker foods, and the lovely people at <b>&#23458;&#23478;&#20332;&#25794;&#33590; (Hakka Thunder Tea) #01-31</b>. Thunder tea rice is healthy and meatless to boot, but, for me, those are afterthoughts. The stuff is scrumptious, period.<br><br>A note about hawker centre labelling: NEA&rsquo;s official list separates the food centre on Commonwealth Drive (this one) from the one on Tanglin Halt Road, which they label &ldquo;Tanglin Halt Market&rdquo;, even though this one has a sign in front announcing &ldquo;Tanglin Halt Food Centre&rdquo;. Go figure.",
+      "description": "<b>Commonwealth Drive Blks 1A/2A/3A</b><br><i>Commonwealth Drive Blks 1A/2A/3A, 141001/141002/141003</i><br><a href='https://www.youtube.com/watch?v=w8vnxwIV7sw&t=3m17s' target='_blank'>The Great Singapore Hawker Countdown: 8 more days, 14 more hawker centres</a><hr>You could argue that what I&rsquo;m about to do would represent an abandonment of journalistic principle. On the basis of a single stall&rsquo;s resolute and unequivocal deliciousness, I hereby establish Blks 1A/2A/3A Commonwealth Drive (Tanglin Halt B) one of SG&rsquo;s tastiest food centres. I&rsquo;m not proud, but I&rsquo;m equally unapologetic. Such is my devotion to thunder tea rice, one of the most underrated hawker foods, and the lovely people at <b>&#23458;&#23478;&#20332;&#25794;&#33590; (Hakka Thunder Tea) #01-31</b>. Thunder tea rice is healthy and meatless to boot, but, for me, those are afterthoughts. The stuff is scrumptious, period.<br><br>A note about hawker centre labelling: NEA&rsquo;s official list separates the food centre on Commonwealth Drive (this one) from the one on Tanglin Halt Road, which they label &ldquo;Tanglin Halt Market&rdquo;, even though this one has a sign in front announcing &ldquo;Tanglin Halt Food Centre&rdquo;. Go figure.",
       'marker-color': '#2721D6',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -720,7 +733,7 @@ var geojson = [
       coordinates: [103.81836299999998, 1.287351]
     },
     properties: {
-      "description": "<b>Redhill</b><br><i>Blk 85 Redhill Lane, 150085</i><hr>So how good are the <b>Yan Fried Bee Hoon #01-09</b> chicken wings that PM Lee queued for, seemingly unaccompanied by security personnel, just like a regular Joe? Search &ldquo;PM Lee chicken wings&rdquo; right now and you&rsquo;ll see what I&rsquo;m talking about. They&rsquo;re very good. Really good. The didn&rsquo;t change my life the way the spring chicken from Boon Lay Place did, but I enjoyed the heck out of them, and the bee hoon, yeah, that&rsquo;s tasty, too. <br><br>This is the story of a meatball. One nice, unassuming meatball from <b>Hong Seng Curry Rice #01-74</b>. The tastiest meatball I&rsquo;ve ever had? Superlatives are tricky, but I will put it in my top five most memorable meatball experiences. The curry rice staples are all very good here, too. But, that meatball&#8230;<br><br>Joseph Schooling famously declared after hauling in his gold medal that he just wanted to get back to Singapore and snuggle up with a nice hot plate of chai tow kway. I&rsquo;d like to think that the <b>Fu Ming Cooked Food #01-49</b> would have filled him up right.<br><br>I&rsquo;m not aware that anyone has written a dissertation on Singapore curry styles, but it would be a fruitful endeavour. <b>Hock Shun Traditional Home-made Curry #01-66</b> brews what I take to be a classically Singapore Chinese chicken curry: not overly milky nor too spicy, maybe a slight herbal touch&#8230; the neat thing is that you can order with rice or bread. The bread is fun.<br><br>Let&rsquo;s keep this train chugging along with a tip of the cap to <b>Sang Cuisine #01-36</b> and their very nice rendition of Hokkien-style black noodles. Don&rsquo;t confuse this with Hokkien mee as it&rsquo;s configured in SG: these are akin to KL-style Hokkien noodles (pro-tip: the apotheosis of KL Hokkien noodle culture is Restauran Ahwa in Petaling Jaya).<br><br>Multiple Singaporean friends and one Malaysian friend of mine confirm that the beh teh saw from <b>Bread Station #01-45</b> are extraordinary relative to conventional beh teh saw. I could tell you only that they were extraordinary in objective terms.",
+      "description": "<b>Redhill</b><br><i>Blk 85 Redhill Lane, 150085</i><br><a href='https://www.youtube.com/watch?v=MvDl_BA7p4w&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 15 more days, 18 more hawker centres</a><hr>So how good are the <b>Yan Fried Bee Hoon #01-09</b> chicken wings that PM Lee queued for, seemingly unaccompanied by security personnel, just like a regular Joe? Search &ldquo;PM Lee chicken wings&rdquo; right now and you&rsquo;ll see what I&rsquo;m talking about. They&rsquo;re very good. Really good. The didn&rsquo;t change my life the way the spring chicken from Boon Lay Place did, but I enjoyed the heck out of them, and the bee hoon, yeah, that&rsquo;s tasty, too. <br><br>This is the story of a meatball. One nice, unassuming meatball from <b>Hong Seng Curry Rice #01-74</b>. The tastiest meatball I&rsquo;ve ever had? Superlatives are tricky, but I will put it in my top five most memorable meatball experiences. The curry rice staples are all very good here, too. But, that meatball&#8230;<br><br>Joseph Schooling famously declared after hauling in his gold medal that he just wanted to get back to Singapore and snuggle up with a nice hot plate of chai tow kway. I&rsquo;d like to think that the <b>Fu Ming Cooked Food #01-49</b> would have filled him up right.<br><br>I&rsquo;m not aware that anyone has written a dissertation on Singapore curry styles, but it would be a fruitful endeavour. <b>Hock Shun Traditional Home-made Curry #01-66</b> brews what I take to be a classically Singapore Chinese chicken curry: not overly milky nor too spicy, maybe a slight herbal touch&#8230; the neat thing is that you can order with rice or bread. The bread is fun.<br><br>Let&rsquo;s keep this train chugging along with a tip of the cap to <b>Sang Cuisine #01-36</b> and their very nice rendition of Hokkien-style black noodles. Don&rsquo;t confuse this with Hokkien mee as it&rsquo;s configured in SG: these are akin to KL-style Hokkien noodles (pro-tip: the apotheosis of KL Hokkien noodle culture is Restauran Ahwa in Petaling Jaya).<br><br>Multiple Singaporean friends and one Malaysian friend of mine confirm that the beh teh saw from <b>Bread Station #01-45</b> are extraordinary relative to conventional beh teh saw. I could tell you only that they were extraordinary in objective terms.",
       'marker-color': '#2721D6',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -759,7 +772,7 @@ var geojson = [
       coordinates: [103.718212, 1.349774]
     },
     properties: {
-      "description": "<b>Jurong West Blk 505</b><br><i>Blk 505 Jurong West Street 52, 640505</i><hr>The marriage of food centre and wet market is sacred. I pray &ndash; and I&rsquo;m not a religious person &ndash; that young Singaporeans will see the value in patronizing wet market vendors even if it&rsquo;s less efficient and convenient than buying from FairPrice and co. Nowhere is the physical joining of wet market and food centre more artful than at Jurong West 505. Sometimes the wet market is in a separate building; very often it&rsquo;s downstairs; other times the two are on the same level in the same building, but they maintain discrete orbits. At Jurong West 505, they flow into each other in the most pleasing way. And you&rsquo;ll be doubly pleased to consider this centre&rsquo;s aesthetic sensibilities inhaling what just might be the best char siew I&rsquo;ve ever had. The name? It&rsquo;s tricky. I took notes on this before I could read Chinese, so what I&rsquo;ve got for you is <b>&ldquo;Chinese sign (Hong Lim Hawker Centre)&rdquo; #01-24</b>. The number is correct, guaranteed, so just find stall #24 with char siew in the window. The meat is incredibly tender and fatty. Order it with mian instead of rice and you&rsquo;ll be in business.<br><br>If you&rsquo;ve read my blurb on Commonwealth Drive (blue colour), then you&rsquo;ll know how I feel about thunder tea rice. <b>Traditional Hakka Lui Cha #01-12</b> does it very well.<br><br>We&rsquo;re not done! There are multiple respected porridge stalls here. One of them is <b>&ldquo;Chinese sign&rdquo; #01-191</b> (there&rsquo;s some humour in this, I think!).",
+      "description": "<b>Jurong West Blk 505</b><br><i>Blk 505 Jurong West Street 52, 640505</i><br><a href='https://www.youtube.com/watch?v=GysvHsbYi70&t=110s' target='_blank'>The Great Singapore Hawker Countdown: 29 more days, 40 more hawker centres</a><hr>The marriage of food centre and wet market is sacred. I pray &ndash; and I&rsquo;m not a religious person &ndash; that young Singaporeans will see the value in patronizing wet market vendors even if it&rsquo;s less efficient and convenient than buying from FairPrice and co. Nowhere is the physical joining of wet market and food centre more artful than at Jurong West 505. Sometimes the wet market is in a separate building; very often it&rsquo;s downstairs; other times the two are on the same level in the same building, but they maintain discrete orbits. At Jurong West 505, they flow into each other in the most pleasing way. And you&rsquo;ll be doubly pleased to consider this centre&rsquo;s aesthetic sensibilities inhaling what just might be the best char siew I&rsquo;ve ever had. The name? It&rsquo;s tricky. I took notes on this before I could read Chinese, so what I&rsquo;ve got for you is <b>&ldquo;Chinese sign (Hong Lim Hawker Centre)&rdquo; #01-24</b>. The number is correct, guaranteed, so just find stall #24 with char siew in the window. The meat is incredibly tender and fatty. Order it with mian instead of rice and you&rsquo;ll be in business.<br><br>If you&rsquo;ve read my blurb on Commonwealth Drive (blue colour), then you&rsquo;ll know how I feel about thunder tea rice. <b>Traditional Hakka Lui Cha #01-12</b> does it very well.<br><br>We&rsquo;re not done! There are multiple respected porridge stalls here. One of them is <b>&ldquo;Chinese sign&rdquo; #01-191</b> (there&rsquo;s some humour in this, I think!).",
       'marker-color': '#7C09B0',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -785,7 +798,7 @@ var geojson = [
       coordinates: [103.81698699999993, 1.284152]
     },
     properties: {
-      "description": "<b>Bukit Merah Central</b><br><i>Blk 163 Bukit Merah Central, 150163</i><hr>Bukit Merah Central might be the very best food centre that nine-out-of-ten Singaporeans have barely heard of, let alone visited. The signage here is straight out of my idealized 1970&rsquo;s hawker fantasy. Check out that 3D plastic moulding! So, so, so much cooler than everyday printed signs. And I love BMC&rsquo;s split personality. Walk down one aisle, turn, turn, walk up the other. Outdoor seating with umbrellas&#8230; hard to beat for ambiance. Hard to beat for noodles, too, if you have the good sense to patronize <b>Day Night Fried Kway Teow #02-29</b> or <b>Lai Hin Fish Ball Kway Teow Mee #02-11</b>, both of which are excellent.",
+      "description": "<b>Bukit Merah Central</b><br><i>Blk 163 Bukit Merah Central, 150163</i><br><a href='https://youtu.be/xNp95AZxj4I?t=2m' target='_blank'>The Great Singapore Hawker Countdown: 16 more days, 18 more hawker centres</a><hr>Bukit Merah Central might be the very best food centre that nine-out-of-ten Singaporeans have barely heard of, let alone visited. The signage here is straight out of my idealized 1970&rsquo;s hawker fantasy. Check out that 3D plastic moulding! So, so, so much cooler than everyday printed signs. And I love BMC&rsquo;s split personality. Walk down one aisle, turn, turn, walk up the other. Outdoor seating with umbrellas&#8230; hard to beat for ambiance. Hard to beat for noodles, too, if you have the good sense to patronize <b>Day Night Fried Kway Teow #02-29</b> or <b>Lai Hin Fish Ball Kway Teow Mee #02-11</b>, both of which are excellent.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -928,7 +941,7 @@ var geojson = [
       coordinates: [103.82600300000001, 1.280003]
     },
     properties: {
-      "description": "<b>Jalan Bukit Merah</b><br><i>Blk 112 Jalan Bukit Merah, 160112</i><hr>Like soon kueh? <b>Lin Ji Traditional &amp; Nonya Kueh #01-20</b> makes &lsquo;em right.",
+      "description": "<b>Jalan Bukit Merah</b><br><i>Blk 112 Jalan Bukit Merah, 160112</i><br><a href='https://www.youtube.com/watch?v=sUnQEv-I2dQ&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 28 more days, 38 more hawker centres</a><hr>Like soon kueh? <b>Lin Ji Traditional &amp; Nonya Kueh #01-20</b> makes &lsquo;em right.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -941,7 +954,7 @@ var geojson = [
       coordinates: [103.94117600000004, 1.324313]
     },
     properties: {
-      "description": "<b>New Upper Changi Road Blk 58</b><br><i>Blk 58 New Upper Changi Road, 461058</i><hr>I don&rsquo;t know why I developed such an intense attraction to mushroom chicken feet noodle for a time&#8230; but I did, and I asked the <b>Chen Ji #01-179</b> people to make the stuff for me, and they did, and it was nice.",
+      "description": "<b>New Upper Changi Road Blk 58</b><br><i>Blk 58 New Upper Changi Road, 461058</i><br><a href='https://www.youtube.com/watch?v=sUnQEv-I2dQ&t=89s' target='_blank'>The Great Singapore Hawker Countdown: 28 more days, 38 more hawker centres</a><hr>I don&rsquo;t know why I developed such an intense attraction to mushroom chicken feet noodle for a time&#8230; but I did, and I asked the <b>Chen Ji #01-179</b> people to make the stuff for me, and they did, and it was nice.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -954,7 +967,7 @@ var geojson = [
       coordinates: [103.82198500000004, 1.272617]
     },
     properties: {
-      "description": "<b>Telok Blangah Rise</b><br><i>Blk 36 Telok Blangah Rise, 090036</i><hr><b>Kim Tian LV Carrot Cake #01-39</b> fries up some of the best white carrot cake of all time, am I right!? A whole mess of chai poh brings with it a ton of salt&#8230; wash it down with teh and don&rsquo;t stress.",
+      "description": "<b>Telok Blangah Rise</b><br><i>Blk 36 Telok Blangah Rise, 090036</i><br><a href='https://www.youtube.com/watch?v=-zz3Ml3aYLY&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 25 more days, 35 more hawker centres</a><hr><b>Kim Tian LV Carrot Cake #01-39</b> fries up some of the best white carrot cake of all time, am I right!? A whole mess of chai poh brings with it a ton of salt&#8230; wash it down with teh and don&rsquo;t stress.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -967,7 +980,7 @@ var geojson = [
       coordinates: [103.87925189999999, 1.316995]
     },
     properties: {
-      "description": "<b>Sims Vista</b><br><i>Blk 49 Sims Place, 380049</i><hr>I&rsquo;ve said before that I don&rsquo;t eat fish soup very often; when it&rsquo;s 33 degrees Celsius outside and 140% humidity, why add insult to injury by hovering your face over a bowl of near-boiling water? Occasionally, though, I feel masochistic, and I did that one time I enjoyed the bee hoon fish soup from <b>Hock Heng Cooked Food #01-31</b>.",
+      "description": "<b>Sims Vista</b><br><i>Blk 49 Sims Place, 380049</i><br><a href='https://www.youtube.com/watch?v=-zz3Ml3aYLY&t=145s' target='_blank'>The Great Singapore Hawker Countdown: 25 more days, 35 more hawker centres</a><hr>I&rsquo;ve said before that I don&rsquo;t eat fish soup very often; when it&rsquo;s 33 degrees Celsius outside and 140% humidity, why add insult to injury by hovering your face over a bowl of near-boiling water? Occasionally, though, I feel masochistic, and I did that one time I enjoyed the bee hoon fish soup from <b>Hock Heng Cooked Food #01-31</b>.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -980,7 +993,7 @@ var geojson = [
       coordinates: [103.75089739999999, 1.345871]
     },
     properties: {
-      "description": "<b>Bukit Panjang</b><br><i>2 Bukit Panjang Ring Road, 679947</i><hr>It&rsquo;s time that we dive deep into the complexities of hawker centre management. Please refer to the &ldquo;About my Hawker Adventures and this Map&rdquo; page for an entry-level elaboration on the distinction between a proper food centre and a coffee shop. Here in Pasir Panjang, things get trickier: yes, this food centre is owned by the government, but no, it&rsquo;s not managed by NEA, but rather by a social enterprise. The only other food centre of this type is Ci Yuan out in Hougang. You can tell immediately on stepping in that things are different. Look at those atas chairs!! Wood and design-y stuff! I&rsquo;m a little weirded out, but in a good way. There&rsquo;s nothing weird about the braised pork and pork chop rice from <b>BP Braised Meat Rice #01-25</b>, though. It&rsquo;s just scrumptious.",
+      "description": "<b>Bukit Panjang</b><br><i>2 Bukit Panjang Ring Road, 679947</i><br><a href='https://www.youtube.com/watch?v=-zz3Ml3aYLY&t=259s' target='_blank'>The Great Singapore Hawker Countdown: 25 more days, 35 more hawker centres</a><hr>It&rsquo;s time that we dive deep into the complexities of hawker centre management. Please refer to the &ldquo;About my Hawker Adventures and this Map&rdquo; page for an entry-level elaboration on the distinction between a proper food centre and a coffee shop. Here in Pasir Panjang, things get trickier: yes, this food centre is owned by the government, but no, it&rsquo;s not managed by NEA, but rather by a social enterprise. The only other food centre of this type is Ci Yuan out in Hougang. You can tell immediately on stepping in that things are different. Look at those atas chairs!! Wood and design-y stuff! I&rsquo;m a little weirded out, but in a good way. There&rsquo;s nothing weird about the braised pork and pork chop rice from <b>BP Braised Meat Rice #01-25</b>, though. It&rsquo;s just scrumptious.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -993,7 +1006,7 @@ var geojson = [
       coordinates: [103.88399800000002, 1.307274]
     },
     properties: {
-      "description": "<b>Kallang Estate</b><br><i>17 Old Airport Road, 397972</i><hr>Bak chor mee and dumpling soup from <b>&#22823;&#40060;&#22278;&#32933;&#32905;&#33054;&#38754; #01-14</b>? Why not?",
+      "description": "<b>Kallang Estate</b><br><i>17 Old Airport Road, 397972</i><br><a href='https://www.youtube.com/watch?v=KjwY-Lx8c6s&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 24 more days, 33 more hawker centres</a><hr>Bak chor mee and dumpling soup from <b>&#22823;&#40060;&#22278;&#32933;&#32905;&#33054;&#38754; #01-14</b>? Why not?",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1006,7 +1019,7 @@ var geojson = [
       coordinates: [103.88392299999998, 1.302428]
     },
     properties: {
-      "description": "<b>Jalan Batu</b><br><i>Blk 4A Jalan Batu, 432004</i><hr>Is it not true that we often fail to give kopi stalls their due? Great kopi and mediocre kopi have little to do with one another, a fact which we should more often recognize. So here&rsquo;s to <b>Kipo Coffee Stall #01-26</b> and their kaya toast, soft-boiled eggs, and kopi gau siew dai, all three a great way to start the day.",
+      "description": "<b>Jalan Batu</b><br><i>Blk 4A Jalan Batu, 432004</i><br><a href='https://www.youtube.com/watch?v=KjwY-Lx8c6s&t=18s' target='_blank'>The Great Singapore Hawker Countdown: 24 more days, 33 more hawker centres</a><hr>Is it not true that we often fail to give kopi stalls their due? Great kopi and mediocre kopi have little to do with one another, a fact which we should more often recognize. So here&rsquo;s to <b>Kipo Coffee Stall #01-26</b> and their kaya toast, soft-boiled eggs, and kopi gau siew dai, all three a great way to start the day.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1019,7 +1032,7 @@ var geojson = [
       coordinates: [103.85300499999994, 1.336115]
     },
     properties: {
-      "description": "<b>Toa Payoh Lorong 5 Blk 75</b><br><i>Blk 75 Lorong 5 Toa Payoh, 310075</i><hr>What chili these <b>Song Kee Kway Teow Noodle Soup #01-20</b> mavericks cook up! Richly flavoured, and it goes great with their fishball mian.",
+      "description": "<b>Toa Payoh Lorong 5 Blk 75</b><br><i>Blk 75 Lorong 5 Toa Payoh, 310075</i><br><a href='https://www.youtube.com/watch?v=C5tcCREpm34&t=92s' target='_blank'>The Great Singapore Hawker Countdown: 21 more days, 32 more hawker centres</a><hr>What chili these <b>Song Kee Kway Teow Noodle Soup #01-20</b> mavericks cook up! Richly flavoured, and it goes great with their fishball mian.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1032,7 +1045,7 @@ var geojson = [
       coordinates: [103.84001699999999, 1.367211]
     },
     properties: {
-      "description": "<b>Kebun Baru</b><br><i>Blk 226H Ang Mo Kio Street 22, 568226</i><hr>I&rsquo;d never heard of sheng mian, neither mian fen guo, until I found myself in deepest Ang Mo Kio at <b>Seletar Sheng Mian, Mian Fen Guo #01-07</b>. Let&rsquo;s describe it as a certain sort of noodles swimming in a light-coloured thick gravy&#8230; it&rsquo;s not unlike ban mian. Good stuff.",
+      "description": "<b>Kebun Baru</b><br><i>Blk 226H Ang Mo Kio Street 22, 568226</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=59s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>I&rsquo;d never heard of sheng mian, neither mian fen guo, until I found myself in deepest Ang Mo Kio at <b>Seletar Sheng Mian, Mian Fen Guo #01-07</b>. Let&rsquo;s describe it as a certain sort of noodles swimming in a light-coloured thick gravy&#8230; it&rsquo;s not unlike ban mian. Good stuff.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1045,7 +1058,7 @@ var geojson = [
       coordinates: [103.83917599999995, 1.366795]
     },
     properties: {
-      "description": "<b>Kebun Baru #2</b><br><i>Blk 226D Ang Mo Kio Ave 1, 564226</i><hr>Permit me to explain myself. Perhaps this food centre has a better name than &ldquo;Kebun Baru #2&rdquo;. But, as it&rsquo;s merely &ldquo;Blk 226D Ang Mo Kio Ave 1&rdquo; according to the official NEA list, and that&rsquo;s surely a worse name, I&rsquo;ve stuck with &ldquo;Kebun Baru #2&rdquo;. Meanwhile, nasi lemak from <b>CaiLi Cooked Food #01-102</b> has got it going on.",
+      "description": "<b>Kebun Baru #2</b><br><i>Blk 226D Ang Mo Kio Ave 1, 564226</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=2m35s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>Permit me to explain myself. Perhaps this food centre has a better name than &ldquo;Kebun Baru #2&rdquo;. But, as it&rsquo;s merely &ldquo;Blk 226D Ang Mo Kio Ave 1&rdquo; according to the official NEA list, and that&rsquo;s surely a worse name, I&rsquo;ve stuck with &ldquo;Kebun Baru #2&rdquo;. Meanwhile, nasi lemak from <b>CaiLi Cooked Food #01-102</b> has got it going on.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1058,7 +1071,7 @@ var geojson = [
       coordinates: [103.84656199999995, 1.372185]
     },
     properties: {
-      "description": "<b>Ang Mo Kio Ave 6 Blk 724</b><br><i>Blk 724 Ang Mo Kio Ave 6, 560724</i><hr>I&rsquo;m not sure that I&rsquo;ve ever seen a queue for yong tau foo as deep as the one I saw one dear morning at <b>Xi Xiang Feng #01-23</b>. Do you ever hesitate to order laksa yong tau foo because you wonder whether hawkers these days really take the time &ndash; and spend the money &ndash; to make the gravy as rich and spicy as it should be? I know I do, but never fear with these guys. Their laksa gravy will whack you over the head.",
+      "description": "<b>Ang Mo Kio Ave 6 Blk 724</b><br><i>Blk 724 Ang Mo Kio Ave 6, 560724</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=3m47s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>I&rsquo;m not sure that I&rsquo;ve ever seen a queue for yong tau foo as deep as the one I saw one dear morning at <b>Xi Xiang Feng #01-23</b>. Do you ever hesitate to order laksa yong tau foo because you wonder whether hawkers these days really take the time &ndash; and spend the money &ndash; to make the gravy as rich and spicy as it should be? I know I do, but never fear with these guys. Their laksa gravy will whack you over the head.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1084,7 +1097,7 @@ var geojson = [
       coordinates: [103.838842, 1.37426]
     },
     properties: {
-      "description": "<b>Mayflower</b><br><i>Blk 162 Ang Mo Kio Ave 4, 560162</i><hr>We were in the midst of a true hawker rampage, my buddy and I, when we made it to Mayflower. It would have been easy to roll over and play dead before the prospect of more noodles, more fried meats of various description... but that&rsquo;s not who we are, and that&rsquo;s not what we did. Instead, we hauled in delicious prawn paste chicken from <b>Rong Ji Mei Shi #01-13</b> and very nice Ipoh hor fun from <b>Jin Song #01-30</b>. And we kept on keeping on.",
+      "description": "<b>Mayflower</b><br><i>Blk 162 Ang Mo Kio Ave 4, 560162</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=13m48s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>We were in the midst of a true hawker rampage, my buddy and I, when we made it to Mayflower. It would have been easy to roll over and play dead before the prospect of more noodles, more fried meats of various description... but that&rsquo;s not who we are, and that&rsquo;s not what we did. Instead, we hauled in delicious prawn paste chicken from <b>Rong Ji Mei Shi #01-13</b> and very nice Ipoh hor fun from <b>Jin Song #01-30</b>. And we kept on keeping on.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1097,7 +1110,7 @@ var geojson = [
       coordinates: [103.84806500000002, 1.364171]
     },
     properties: {
-      "description": "<b>Teck Ghee Court</b><br><i>Blk 341 Ang Mo Kio Ave 1, 560341</i><hr>Prawn fritters, if you get &lsquo;em straight from the fryer, kick the <b>Ang Mo Kio Curry Rice #01-25</b> experience up a notch or two.",
+      "description": "<b>Teck Ghee Court</b><br><i>Blk 341 Ang Mo Kio Ave 1, 560341</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=15m25s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>Prawn fritters, if you get &lsquo;em straight from the fryer, kick the <b>Ang Mo Kio Curry Rice #01-25</b> experience up a notch or two.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1110,7 +1123,7 @@ var geojson = [
       coordinates: [103.85529399999996, 1.363019]
     },
     properties: {
-      "description": "<b>Teck Ghee Square</b><br><i>Blk 409 Ang Mo Kio Ave 10, 560409</i><hr>Where, when, and how did chicken chop/cutlet, pork chop/cutlet, and their respective black pepper renditions served alongside beans, fries, and coleslaw come to represent an entire continent&rsquo;s worth of food? Don&rsquo;t get me wrong, I love hawker Western, and there&rsquo;s truth in advertising at <b>Yummy Western #01-29</b>.",
+      "description": "<b>Teck Ghee Square</b><br><i>Blk 409 Ang Mo Kio Ave 10, 560409</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=15m49s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>Where, when, and how did chicken chop/cutlet, pork chop/cutlet, and their respective black pepper renditions served alongside beans, fries, and coleslaw come to represent an entire continent&rsquo;s worth of food? Don&rsquo;t get me wrong, I love hawker Western, and there&rsquo;s truth in advertising at <b>Yummy Western #01-29</b>.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1123,7 +1136,7 @@ var geojson = [
       coordinates: [103.85702700000002, 1.335231]
     },
     properties: {
-      "description": "<b>Toa Payoh Lorong 7 Blk 22</b><br><i>Blk 22 Lorong 7 Toa Payoh, 310022</i><hr>One of those big round food centre tables entirely covered in food: that&rsquo;s what we had when our posse showed up at <b>Hup Seng Hainanese Curry Rice, Fish Head #01-40</b> and said, &ldquo;We&rsquo;ll take it all&rdquo;. Fish head, a sizeable one submerged in a swamp of curried vegetables; pork cutlet, hot and crispy; chap chye, not the insipid stuff, but the real full-force deal; a nice omelet; and braised soya chicken. These are the things that we enjoyed.",
+      "description": "<b>Toa Payoh Lorong 7 Blk 22</b><br><i>Blk 22 Lorong 7 Toa Payoh, 310022</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=16m31s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr>One of those big round food centre tables entirely covered in food: that&rsquo;s what we had when our posse showed up at <b>Hup Seng Hainanese Curry Rice, Fish Head #01-40</b> and said, &ldquo;We&rsquo;ll take it all&rdquo;. Fish head, a sizeable one submerged in a swamp of curried vegetables; pork cutlet, hot and crispy; chap chye, not the insipid stuff, but the real full-force deal; a nice omelet; and braised soya chicken. These are the things that we enjoyed.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1136,7 +1149,7 @@ var geojson = [
       coordinates: [103.85677299999998, 1.367925]
     },
     properties: {
-      "description": "<b>Chong Boon</b><br><i>Blk 453A Ang Mo Kio Ave 10, 561453</i><hr><b>339 Ang Mo Kio #01-14</b> and <b>Hougang Five Mile Cooked Food #01-08</b> are responsible for terrific oyster egg and satay, respectively.",
+      "description": "<b>Chong Boon</b><br><i>Blk 453A Ang Mo Kio Ave 10, 561453</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=18m05s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr><b>339 Ang Mo Kio #01-14</b> and <b>Hougang Five Mile Cooked Food #01-08</b> are responsible for terrific oyster egg and satay, respectively.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1149,7 +1162,7 @@ var geojson = [
       coordinates: [103.85430589999999, 1.3727609]
     },
     properties: {
-      "description": "<b>Cheng San</b><br><i>Blk 527 Ang Mo Kio Ave 10, 560527</i><hr><b>Ann Hoo Teochew Porridge #01-126/127</b> dominates the Cheng San scene. I&rsquo;m better able to place Teochew porridge in context now that I&rsquo;m familiar with Taiwanese porridge, which is even more watery than the Teochew rendition. It seems that, much like fried noodles ranging from Singapore to Thailand, we&rsquo;re looking at a porridge continuum. In the west, we have Hainan and Guangdong porridge, thick and well-cooked; in the middle, we have Teochew porridge, watery with distinct rice grains, but not soupy; and out on Taiwan, we have porridge that&rsquo;s really soup with some cooked rice in it.",
+      "description": "<b>Cheng San</b><br><i>Blk 527 Ang Mo Kio Ave 10, 560527</i><br><a href='https://www.youtube.com/watch?v=5Nf8vm2zGnU&t=19m04s' target='_blank'>The Great Singapore Hawker Countdown: 14 more days, 18 more hawker centres</a><hr><b>Ann Hoo Teochew Porridge #01-126/127</b> dominates the Cheng San scene. I&rsquo;m better able to place Teochew porridge in context now that I&rsquo;m familiar with Taiwanese porridge, which is even more watery than the Teochew rendition. It seems that, much like fried noodles ranging from Singapore to Thailand, we&rsquo;re looking at a porridge continuum. In the west, we have Hainan and Guangdong porridge, thick and well-cooked; in the middle, we have Teochew porridge, watery with distinct rice grains, but not soupy; and out on Taiwan, we have porridge that&rsquo;s really soup with some cooked rice in it.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1162,7 +1175,7 @@ var geojson = [
       coordinates: [103.90655700000002, 1.302245]
     },
     properties: {
-      "description": "<b>Marine Parade</b><br><i>Blk 84 Marine Parade Central, 440084</i><hr>Haphazard and a real hodgepodge, Marine Parade feels like it sprang up one morning when the good people of eastern Singapore got together and wheeled Malaysia-style kopitiam assemblies to a central location, welded them together, and pronounced the finished product a food centre. The stall signs aren&rsquo;t aligned, is what I&rsquo;m trying to say: whereas, within any given centre, hawker stall styling is almost always uniform, it&rsquo;s anything but at Marine Parade, which is how Ghim Moh used to look before the renovation. But don&rsquo;t let me get too nostalgic&#8230; I&rsquo;ll distract myself with memories of <b>Netune Dim Sum #01-176</b> (perhaps they&rsquo;re going for Neptune, but the sign definitely doesn&rsquo;t have a P, which would only serve to support my theory that Marine Parade was thrown together in a matter of hours by intrepid locals). Very nice cheong fun, chicken feet, pork ribs, the works.<br><br>I&rsquo;m quite sure I didn&rsquo;t see a stall number on <b>D&rsquo;Authentic Nasi Lemak</b>. Again, the folks who built this place must have been in a rush&#8230; and doubly in a rush to come up with this stall name. Redemption by means of rice redolent of coconut and nicely fried chicken.",
+      "description": "<b>Marine Parade</b><br><i>Blk 84 Marine Parade Central, 440084</i><br><a href='https://www.youtube.com/watch?v=qj8WSCQiqAg&feature=youtu.be&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 19 more days, 20 more hawker centres</a><hr>Haphazard and a real hodgepodge, Marine Parade feels like it sprang up one morning when the good people of eastern Singapore got together and wheeled Malaysia-style kopitiam assemblies to a central location, welded them together, and pronounced the finished product a food centre. The stall signs aren&rsquo;t aligned, is what I&rsquo;m trying to say: whereas, within any given centre, hawker stall styling is almost always uniform, it&rsquo;s anything but at Marine Parade, which is how Ghim Moh used to look before the renovation. But don&rsquo;t let me get too nostalgic&#8230; I&rsquo;ll distract myself with memories of <b>Netune Dim Sum #01-176</b> (perhaps they&rsquo;re going for Neptune, but the sign definitely doesn&rsquo;t have a P, which would only serve to support my theory that Marine Parade was thrown together in a matter of hours by intrepid locals). Very nice cheong fun, chicken feet, pork ribs, the works.<br><br>I&rsquo;m quite sure I didn&rsquo;t see a stall number on <b>D&rsquo;Authentic Nasi Lemak</b>. Again, the folks who built this place must have been in a rush&#8230; and doubly in a rush to come up with this stall name. Redemption by means of rice redolent of coconut and nicely fried chicken.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1175,7 +1188,7 @@ var geojson = [
       coordinates: [103.88506400000006, 1.326412]
     },
     properties: {
-      "description": "<b>Circuit Road Blk 79/79A</b><br><i>Blk 79/79A Circuit Road, 370079/371079</i><hr>As I approached the end of my hawker odyssey, I wondered what these Circuit Road food centres would be like, the three of them there, nestled in that little rarely-spoken-of pocket of near-eastern SG. You know what Blk 79/79a is like? It&rsquo;s, like, very cool. It&rsquo;s long. I love weirdly-shaped food centres. Havelock Road is the weirdest of all, but this puppy is a close second. If you&rsquo;re in the mood for both mala hot pot and oyster egg, as I once was, you&rsquo;d better wear hiking boots. Start your trek at one end of the centre at one of SG&rsquo;s more famous offal destinations, <b>Cheng Mun Kee Pig&rsquo;s Organ Soup #01-104</b>.<br><br>Meanwhile, <b>Ghim Guan Fried Oyster #01-60</b> does the trick.",
+      "description": "<b>Circuit Road Blk 79/79A</b><br><i>Blk 79/79A Circuit Road, 370079/371079</i><br><a href='https://www.youtube.com/watch?v=31o-wcD2mYw' target='_blank'>The Great Singapore Hawker Countdown: 18 more days, 20 more hawker centres</a><hr>As I approached the end of my hawker odyssey, I wondered what these Circuit Road food centres would be like, the three of them there, nestled in that little rarely-spoken-of pocket of near-eastern SG. You know what Blk 79/79a is like? It&rsquo;s, like, very cool. It&rsquo;s long. I love weirdly-shaped food centres. Havelock Road is the weirdest of all, but this puppy is a close second. If you&rsquo;re in the mood for both mala hot pot and oyster egg, as I once was, you&rsquo;d better wear hiking boots. Start your trek at one end of the centre at one of SG&rsquo;s more famous offal destinations, <b>Cheng Mun Kee Pig&rsquo;s Organ Soup #01-104</b>.<br><br>Meanwhile, <b>Ghim Guan Fried Oyster #01-60</b> does the trick.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1188,7 +1201,7 @@ var geojson = [
       coordinates: [103.95541000000003, 1.320837]
     },
     properties: {
-      "description": "<b>Bedok Corner</b><br><i>1 Bedok Road, 469572</i><hr>You know that scene from The Mask of Zorro where Captain Love confronts Zorro with a sneering, &ldquo;The much-debated Zorro&rdquo;? And Zorro wrecks the poor wannabe with his retort, &ldquo;No. The legendary Zorro&rdquo;? For some reason, I think of that scene when I ponder Bedok Corner. Much like Zorro, Bedok Corner is elusive. You don&rsquo;t really know how long Upper East Coast Road is until you&rsquo;ve driven it yourself. It just keeps going. My advice: spare no effort to make your way here, because this is one of the best food centres in the country. Firstly, just like Adam, it&rsquo;s in-the-round, which is awesome. Secondly, it&rsquo;s got a great balance of Malay and Chinese stalls. Let&rsquo;s be real: too many food centres have too little Malay food. Not a problem at Bedok Corner. <b>8 Satay Power &amp; Nasi Lemak #01-08</b> treated me to one of the most satisfying meals of my final months on the island in a giant plate of nasi ambeng. Ambeng, you ask? It&rsquo;s one of the lesser-appreciated Malay mixed rice concoctions. Does anyone else figure that Malay food is to Southeast Asian cuisine as Korean food is to North Asian cuisine? It&rsquo;s the one that packs the biggest outright flavour punch with the greatest consistency.<br><br>But now, a meditation on cheng tng, or ching teng, or cheng teng (here again attempts to Romanize the Chinese language rear their ugly heads). I&rsquo;d never been a big fan. Random dried fruits, nuts, and some fungus in brownish sweetened water? I mean, it didn&rsquo;t light my fire. I had it on good information, though, that <b>Ye Lai Xiang Hot and Cold Cheng Tng #01-31</b> would convert me. It did.",
+      "description": "<b>Bedok Corner</b><br><i>1 Bedok Road, 469572</i><br><a href='https://www.youtube.com/watch?v=VQAP_PvKPl4&feature=youtu.be&t=3m3s' target='_blank'>The Great Singapore Hawker Countdown: 17 more days, 19 more hawker centres</a><hr>You know that scene from The Mask of Zorro where Captain Love confronts Zorro with a sneering, &ldquo;The much-debated Zorro&rdquo;? And Zorro wrecks the poor wannabe with his retort, &ldquo;No. The legendary Zorro&rdquo;? For some reason, I think of that scene when I ponder Bedok Corner. Much like Zorro, Bedok Corner is elusive. You don&rsquo;t really know how long Upper East Coast Road is until you&rsquo;ve driven it yourself. It just keeps going. My advice: spare no effort to make your way here, because this is one of the best food centres in the country. Firstly, just like Adam, it&rsquo;s in-the-round, which is awesome. Secondly, it&rsquo;s got a great balance of Malay and Chinese stalls. Let&rsquo;s be real: too many food centres have too little Malay food. Not a problem at Bedok Corner. <b>8 Satay Power &amp; Nasi Lemak #01-08</b> treated me to one of the most satisfying meals of my final months on the island in a giant plate of nasi ambeng. Ambeng, you ask? It&rsquo;s one of the lesser-appreciated Malay mixed rice concoctions. Does anyone else figure that Malay food is to Southeast Asian cuisine as Korean food is to North Asian cuisine? It&rsquo;s the one that packs the biggest outright flavour punch with the greatest consistency.<br><br>But now, a meditation on cheng tng, or ching teng, or cheng teng (here again attempts to Romanize the Chinese language rear their ugly heads). I&rsquo;d never been a big fan. Random dried fruits, nuts, and some fungus in brownish sweetened water? I mean, it didn&rsquo;t light my fire. I had it on good information, though, that <b>Ye Lai Xiang Hot and Cold Cheng Tng #01-31</b> would convert me. It did.",
       'marker-color': '#7C09B0',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1201,7 +1214,7 @@ var geojson = [
       coordinates: [103.85198200000002, 1.334562]
     },
     properties: {
-      "description": "<b>Toa Payoh Vista</b><br><i>Blk 74 Lorong 4 Toa Payoh, 310074</i><hr>Two words: plate glass. What an inspiring edifice, you have, Toa Payoh Vista!! No other food centre shell is half as classy. Locals hail <b>Toa Payoh Pancake #01-06</b> as one of the best, and I couldn&rsquo;t disagree. <br><br>Yi mian and mee tai mak from <b>&ldquo;Chinese sign&rdquo; #01-03</b> hit the spot, too.",
+      "description": "<b>Toa Payoh Vista</b><br><i>Blk 74 Lorong 4 Toa Payoh, 310074</i><br><a href='https://www.youtube.com/watch?v=xNp95AZxj4I' target='_blank'>The Great Singapore Hawker Countdown: 16 more days, 18 more hawker centres</a><hr>Two words: plate glass. What an inspiring edifice, you have, Toa Payoh Vista!! No other food centre shell is half as classy. Locals hail <b>Toa Payoh Pancake #01-06</b> as one of the best, and I couldn&rsquo;t disagree. <br><br>Yi mian and mee tai mak from <b>&ldquo;Chinese sign&rdquo; #01-03</b> hit the spot, too.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1214,7 +1227,7 @@ var geojson = [
       coordinates: [103.769856, 1.439874]
     },
     properties: {
-      "description": "<b>Woodlands Centre Road</b><br><i>Blk 4A Woodlands Centre Road, 731004</i><hr>Ironic, perhaps, that I&rsquo;m inclined to recognize Woodlands Centre Road for its atmosphere and aesthetics precisely because it&rsquo;s a mess. Refreshing, you could say, its laissez-faire demeanor. There&rsquo;s stuff piled up along the walls, most of the back half of the centre doesn&rsquo;t look to be operational&#8230; with all due respect, I find poetic justice in the fact of this food centre&rsquo;s notable proximity to, and informal manner consistent with, the great country of Malaysia and its food centres. And guess what? It&rsquo;s on the second floor. Of course. Just up the stairs you&rsquo;ll find <b>Five Star Fast Food #02-78</b>. Maggie goreng, mee goreng, you name it.",
+      "description": "<b>Woodlands Centre Road</b><br><i>Blk 4A Woodlands Centre Road, 731004</i><br><a href='https://www.youtube.com/watch?v=Gtgx1hv2Q5Y&t=3m44s' target='_blank'>The Great Singapore Hawker Countdown: 11 more days, 17 more hawker centres</a><hr>Ironic, perhaps, that I&rsquo;m inclined to recognize Woodlands Centre Road for its atmosphere and aesthetics precisely because it&rsquo;s a mess. Refreshing, you could say, its laissez-faire demeanor. There&rsquo;s stuff piled up along the walls, most of the back half of the centre doesn&rsquo;t look to be operational&#8230; with all due respect, I find poetic justice in the fact of this food centre&rsquo;s notable proximity to, and informal manner consistent with, the great country of Malaysia and its food centres. And guess what? It&rsquo;s on the second floor. Of course. Just up the stairs you&rsquo;ll find <b>Five Star Fast Food #02-78</b>. Maggie goreng, mee goreng, you name it.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1227,7 +1240,7 @@ var geojson = [
       coordinates: [103.86388899999997, 1.305398]
     },
     properties: {
-      "description": "<b>North Bridge Road</b><br><i>861 North Bridge Road, 198783</i><hr>As I write these blurbs and reflect on my days as a semi-professional eater, it&rsquo;s becoming clear to me that curry rice was more a staple of my hawker centre travails than I&rsquo;d once appreciated. <b>An Lock Curry Rice #01-109</b> cooks up very good stuff.<br><br>I&rsquo;d most like to call your attention to <b>Teh Tarik.com #01-117</b>. First off, credit where credit is due for the sick name. Now, let me make clear that the kopi cino and syrup limao ais the good uncle once made for me were together the most intoxicatingly pretty hawker centre drinks I&rsquo;d ever beheld. They were delicious, too.",
+      "description": "<b>North Bridge Road</b><br><i>861 North Bridge Road, 198783</i><br><a href='https://www.youtube.com/watch?v=zEAB5a6lA1U&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 10 more days, 16 more hawker centres</a><hr>As I write these blurbs and reflect on my days as a semi-professional eater, it&rsquo;s becoming clear to me that curry rice was more a staple of my hawker centre travails than I&rsquo;d once appreciated. <b>An Lock Curry Rice #01-109</b> cooks up very good stuff.<br><br>I&rsquo;d most like to call your attention to <b>Teh Tarik.com #01-117</b>. First off, credit where credit is due for the sick name. Now, let me make clear that the kopi cino and syrup limao ais the good uncle once made for me were together the most intoxicatingly pretty hawker centre drinks I&rsquo;d ever beheld. They were delicious, too.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1240,7 +1253,7 @@ var geojson = [
       coordinates: [103.86683500000004, 1.363381]
     },
     properties: {
-      "description": "<b>Serangoon Garden</b><br><i>49A Serangoon Garden Way, 555945</i><hr>It&rsquo;s early morning and you&rsquo;re in Serangoon. What do you do? Go to Serangoon Gardens and hit up <b>Serangoon Garden Bakery &amp; Confection #01-45/46</b> for peanut bread and other carby delights.<br><br>It&rsquo;s still breakfast and you&rsquo;re still hungry, so don&rsquo;t forget <b>Rolina Traditional Hainanese Curry Puff #01-33</b>.",
+      "description": "<b>Serangoon Garden</b><br><i>49A Serangoon Garden Way, 555945</i><br><a href='https://www.youtube.com/watch?v=AR6LnUFNpEc' target='_blank'>The Great Singapore Hawker Countdown: 9 more days, 14 more hawker centres</a><hr>It&rsquo;s early morning and you&rsquo;re in Serangoon. What do you do? Go to Serangoon Gardens and hit up <b>Serangoon Garden Bakery &amp; Confection #01-45/46</b> for peanut bread and other carby delights.<br><br>It&rsquo;s still breakfast and you&rsquo;re still hungry, so don&rsquo;t forget <b>Rolina Traditional Hainanese Curry Puff #01-33</b>.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1253,7 +1266,7 @@ var geojson = [
       coordinates: [103.88609500000007, 1.359092]
     },
     properties: {
-      "description": "<b>Kovan</b><br><i>Blk 209 Hougang Street 21, 530209</i><hr>Wanton noodle city, this place. <b>51 Wanton Egg Noodle #01-64</b> does it well.",
+      "description": "<b>Kovan</b><br><i>Blk 209 Hougang Street 21, 530209</i><br><a href='https://youtu.be/AR6LnUFNpEc?t=2m54s' target='_blank'>The Great Singapore Hawker Countdown: 9 more days, 14 more hawker centres</a><hr>Wanton noodle city, this place. <b>51 Wanton Egg Noodle #01-64</b> does it well.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1266,7 +1279,7 @@ var geojson = [
       coordinates: [103.82876599999997, 1.372311]
     },
     properties: {
-      "description": "<b>Sembawang Hills</b><br><i>590 Upper Thomson Road, 574419</i><hr>I recently explained the concept of &ldquo;batting 1000&rdquo; to a Taiwanese friend of mine. I once batted 1000, five for five, at Sembawang Hills. <b>San Ba Wang Guo Zhi Shu Shi #01-06</b> served up top-notch kway chap.<br><br>Then, we counted our lucky stars that <b>Fried Carrot Cake #01-14</b> knew so well everything that we wanted out of black chai tow kway, so sticky and sweet.<br><br>We kept the inning alive with chwee kway from <b>Shui Kway #01-16</b>. And what linguistic hocus-pocus is this!? &ldquo;Shui&rdquo; kway? This was the first and remains the only time I&rsquo;ve ever seen the &ldquo;chwee&rdquo; from chwee kway rendered on a hawker sign in Mandarin, not dialect.<br><br>And with runners on second and third we knocked in two more runs with duck rice and porridge from <b>Seng Huat Duck Rice #01-07</b>.<br><br>Go-ahead run at the plate, we followed the arc of the ball from bat deep into the right field grandstand as we nibbled on <b>Yong Kee Crispy Curry Puff #01-02</b>.",
+      "description": "<b>Sembawang Hills</b><br><i>590 Upper Thomson Road, 574419</i><br><a href='https://www.youtube.com/watch?v=hqcPuHMxW8M&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 7 more days, 12 more hawker centres</a><hr>I recently explained the concept of &ldquo;batting 1000&rdquo; to a Taiwanese friend of mine. I once batted 1000, five for five, at Sembawang Hills. <b>San Ba Wang Guo Zhi Shu Shi #01-06</b> served up top-notch kway chap.<br><br>Then, we counted our lucky stars that <b>Fried Carrot Cake #01-14</b> knew so well everything that we wanted out of black chai tow kway, so sticky and sweet.<br><br>We kept the inning alive with chwee kway from <b>Shui Kway #01-16</b>. And what linguistic hocus-pocus is this!? &ldquo;Shui&rdquo; kway? This was the first and remains the only time I&rsquo;ve ever seen the &ldquo;chwee&rdquo; from chwee kway rendered on a hawker sign in Mandarin, not dialect.<br><br>And with runners on second and third we knocked in two more runs with duck rice and porridge from <b>Seng Huat Duck Rice #01-07</b>.<br><br>Go-ahead run at the plate, we followed the arc of the ball from bat deep into the right field grandstand as we nibbled on <b>Yong Kee Crispy Curry Puff #01-02</b>.",
       'marker-color': '#2721D6',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1279,7 +1292,7 @@ var geojson = [
       coordinates: [103.83664299999998, 1.3521049]
     },
     properties: {
-      "description": "<b>Shunfu Mart</b><br><i>Blk 320 Shunfu Road, 570320</i><hr>If you don&rsquo;t think it&rsquo;s possible that you&rsquo;d be inspired by the undulations in a ceiling, you&rsquo;ve never been to Shunfu Mart. It&rsquo;s as if the authorities had commissioned Dr. Seuss for the interior design. Do I even need to mention that this food centre is on the second floor? Anyways, here we have another famous bakery stall in <b>Chocolat N&rsquo; Spice #02-12/13</b>. The muffins are all the rage.<br><br>It had been at least three years since I&rsquo;d eaten abacus seeds when my kakis dispatched me to <b>Mei Zhen Hakka Delicacies #02-26</b> in search. I found them and they were what we were hoping they&rsquo;d be.",
+      "description": "<b>Shunfu Mart</b><br><i>Blk 320 Shunfu Road, 570320</i><br><a href='https://www.youtube.com/watch?v=hqcPuHMxW8M&t=107s' target='_blank'>The Great Singapore Hawker Countdown: 7 more days, 12 more hawker centres</a><hr>If you don&rsquo;t think it&rsquo;s possible that you&rsquo;d be inspired by the undulations in a ceiling, you&rsquo;ve never been to Shunfu Mart. It&rsquo;s as if the authorities had commissioned Dr. Seuss for the interior design. Do I even need to mention that this food centre is on the second floor? Anyways, here we have another famous bakery stall in <b>Chocolat N&rsquo; Spice #02-12/13</b>. The muffins are all the rage.<br><br>It had been at least three years since I&rsquo;d eaten abacus seeds when my kakis dispatched me to <b>Mei Zhen Hakka Delicacies #02-26</b> in search. I found them and they were what we were hoping they&rsquo;d be.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1292,7 +1305,7 @@ var geojson = [
       coordinates: [103.92486099999996, 1.331798]
     },
     properties: {
-      "description": "<b>Bedok North Street 3 Blk 538</b><br><i>Blk 538 Bedok North Street 3, 460538</i><hr>I was once in the backseat of a car with an inebriated Malaysian man who took it upon himself to yell at me for a handful of minutes about the pathetic quality of mee rebus in Singapore. Malaysia one got lots of spice, he said. Singapore one got nothing. Insipid. Flaccid. Etc. I took it in stride and stood up for SG gastronomy where I could. I recount this story here because, if my Malaysian buddy had only known <b>Nian Kern Yee #01-98</b> mee rebus, I don&rsquo;t think he&rsquo;d have given me as hard a time.",
+      "description": "<b>Bedok North Street 3 Blk 538</b><br><i>Blk 538 Bedok North Street 3, 460538</i><br><a href='https://www.youtube.com/watch?v=26glwwasnN0&t=0s' target='_blank'>The Great Singapore Hawker Countdown: 5 more days, 10 more hawker centres</a><hr>I was once in the backseat of a car with an inebriated Malaysian man who took it upon himself to yell at me for a handful of minutes about the pathetic quality of mee rebus in Singapore. Malaysia one got lots of spice, he said. Singapore one got nothing. Insipid. Flaccid. Etc. I took it in stride and stood up for SG gastronomy where I could. I recount this story here because, if my Malaysian buddy had only known <b>Nian Kern Yee #01-98</b> mee rebus, I don&rsquo;t think he&rsquo;d have given me as hard a time.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1305,7 +1318,7 @@ var geojson = [
       coordinates: [103.93056100000001, 1.333244]
     },
     properties: {
-      "description": "<b>Kaki Bukit</b><br><i>Blk 511 Bedok North Street 3, 460511</i><hr>Kaki Bukit is the most cave-like food centre in the country. It was already the most cave-like when we first sat down, and then the power went out and it became doubly so. If the NEA were so clever as to set up a napping station in here, you could polish off your breakfast from <b>Aliff Nasi Lemak #01-19</b> and go right back to bed without the sweaty walk home.",
+      "description": "<b>Kaki Bukit</b><br><i>Blk 511 Bedok North Street 3, 460511</i><br><a href='https://www.youtube.com/watch?v=26glwwasnN0&t=2m52s' target='_blank'>The Great Singapore Hawker Countdown: 5 more days, 10 more hawker centres</a><hr>Kaki Bukit is the most cave-like food centre in the country. It was already the most cave-like when we first sat down, and then the power went out and it became doubly so. If the NEA were so clever as to set up a napping station in here, you could polish off your breakfast from <b>Aliff Nasi Lemak #01-19</b> and go right back to bed without the sweaty walk home.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1318,7 +1331,7 @@ var geojson = [
       coordinates: [103.93326300000001, 1.32735]
     },
     properties: {
-      "description": "<b>Bedok North Street 1 Blk 216</b><br><i>Blk 216 Bedok North Street 1, 460216</i><hr>I don&rsquo;t know who Chris is, but he knows how to braise porky insides. <b>Chris Kway Chap #01-80</b> hits the spot.",
+      "description": "<b>Bedok North Street 1 Blk 216</b><br><i>Blk 216 Bedok North Street 1, 460216</i><br><a href='https://www.youtube.com/watch?v=26glwwasnN0&t=6m22s' target='_blank'>The Great Singapore Hawker Countdown: 5 more days, 10 more hawker centres</a><hr>I don&rsquo;t know who Chris is, but he knows how to braise porky insides. <b>Chris Kway Chap #01-80</b> hits the spot.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1331,7 +1344,7 @@ var geojson = [
       coordinates: [103.94470999999999, 1.345531]
     },
     properties: {
-      "description": "<b>Tampines Round Market</b><br><i>Blk 137 Tampines Street 11, 521137</i><hr>Maybe I just hadn&rsquo;t slept enough the night before, but when I lunched at Tampines Round Market I couldn&rsquo;t shake the feeling that I could have been in Star Wars&rsquo; Cloud City. The commercial and gastronomic components crash right into each other here, which is neat. The queue was long at <b>Lao Lee&rsquo;s Pig&rsquo;s Viscera Pork Ribs Prawn Noodle #01-43</b>, and when our bowl of prawn mee had been drained, we knew why. Also, applause for &ldquo;viscera&rdquo;, please.<br><br>Kolo mee!? Cat cat city cat cat city&#8230; I had incredible kolo mee in Kuching at the food centre right there next to the playing field. The version from <b>Yummy Sarawak Kolo Mee #01-45</b> doesn&rsquo;t coat your mouth with as much grease, which is okay, I guess.<br><br>You&rsquo;ll have to wait, but you&rsquo;ll be glad you did when you tuck into gooey gloppy porridge from <b>Chai Chee Pork Porridge #01-39</b>.",
+      "description": "<b>Tampines Round Market</b><br><i>Blk 137 Tampines Street 11, 521137</i><br><a href='https://www.youtube.com/watch?v=26glwwasnN0&t=10m24s' target='_blank'>The Great Singapore Hawker Countdown: 5 more days, 10 more hawker centres</a><hr>Maybe I just hadn&rsquo;t slept enough the night before, but when I lunched at Tampines Round Market I couldn&rsquo;t shake the feeling that I could have been in Star Wars&rsquo; Cloud City. The commercial and gastronomic components crash right into each other here, which is neat. The queue was long at <b>Lao Lee&rsquo;s Pig&rsquo;s Viscera Pork Ribs Prawn Noodle #01-43</b>, and when our bowl of prawn mee had been drained, we knew why. Also, applause for &ldquo;viscera&rdquo;, please.<br><br>Kolo mee!? Cat cat city cat cat city&#8230; I had incredible kolo mee in Kuching at the food centre right there next to the playing field. The version from <b>Yummy Sarawak Kolo Mee #01-45</b> doesn&rsquo;t coat your mouth with as much grease, which is okay, I guess.<br><br>You&rsquo;ll have to wait, but you&rsquo;ll be glad you did when you tuck into gooey gloppy porridge from <b>Chai Chee Pork Porridge #01-39</b>.",
       'marker-color': '#FF0067',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1344,7 +1357,7 @@ var geojson = [
       coordinates: [103.89012500000001, 1.354063]
     },
     properties: {
-      "description": "<b>Hougang Ave 1 Blk 105</b><br><i>Blk 105 Hougang Ave 1, 530105</i><hr><b>Apollo Western Food #02-32</b> served me an angus ribeye once, and I devoured it.",
+      "description": "<b>Hougang Ave 1 Blk 105</b><br><i>Blk 105 Hougang Ave 1, 530105</i><br><a href='https://www.youtube.com/watch?v=IX8ht_ohhAc' target='_blank'>The Great Singapore Hawker Countdown: 4 more days, 8 more hawker centres</a><hr><b>Apollo Western Food #02-32</b> served me an angus ribeye once, and I devoured it.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1357,7 +1370,7 @@ var geojson = [
       coordinates: [103.88294719999999, 1.3749377]
     },
     properties: {
-      "description": "<b>Ci Yuan</b><br><i>51 Hougang Ave 9, 538776</i><hr>Check out my Bukit Panjang (it&rsquo;s that pink one over in north-western SG) blurb for a more thorough primer on the structural difference between it, Ci Yuan, and the other 106 SG food centres. BP and CY are social enterprise-managed brothers, but CY stands alone as the only food centre in the nation with automated, electrified payment systems standard throughout the centre. Did my satay beehoon from <b>Teochew Satay Beehoon #01-14</b> taste any better as a result? Doubt it, but distinctiveness is valuable in and of itself.",
+      "description": "<b>Ci Yuan</b><br><i>51 Hougang Ave 9, 538776</i><br><a href='https://www.youtube.com/watch?v=IX8ht_ohhAc&feature=youtu.be&t=2m33s' target='_blank'>The Great Singapore Hawker Countdown: 4 more days, 8 more hawker centres</a><hr>Check out my Bukit Panjang (it&rsquo;s that pink one over in north-western SG) blurb for a more thorough primer on the structural difference between it, Ci Yuan, and the other 106 SG food centres. BP and CY are social enterprise-managed brothers, but CY stands alone as the only food centre in the nation with automated, electrified payment systems standard throughout the centre. Did my satay beehoon from <b>Teochew Satay Beehoon #01-14</b> taste any better as a result? Doubt it, but distinctiveness is valuable in and of itself.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1370,7 +1383,7 @@ var geojson = [
       coordinates: [103.85408499999994, 1.323415]
     },
     properties: {
-      "description": "<b>Whampoa Blks 91/92</b><br><i>Blks 91/92 Whampoa Drive, 320091/320092</i><hr>Cool sign and tasty mee siam from <b>Robert Mee Siam Lontong #01-43</b>.",
+      "description": "<b>Whampoa Blks 91/92</b><br><i>Blks 91/92 Whampoa Drive, 320091/320092</i><br><a href='https://www.youtube.com/watch?v=jcQ8SmSZSf0' target='_blank'>The Great Singapore Hawker Countdown: 3 more days, 6 more hawker centres</a><hr>Cool sign and tasty mee siam from <b>Robert Mee Siam Lontong #01-43</b>.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1383,7 +1396,7 @@ var geojson = [
       coordinates: [103.827988, 1.431945]
     },
     properties: {
-      "description": "<b>Chong Pang</b><br><i>Blks 104/105 Yishun Ring Road, 760104/760105</i><hr>Mee hoon kway is just like ban mian, except the noodles are thicker and chewier. Mine from <b>Nee Soon Fish Head Mee Hoon #01-154</b> hit the spot.",
+      "description": "<b>Chong Pang</b><br><i>Blks 104/105 Yishun Ring Road, 760104/760105</i><br><a href='https://youtu.be/jcQ8SmSZSf0?t=2m32s' target='_blank'>The Great Singapore Hawker Countdown: 3 more days, 6 more hawker centres</a><hr>Mee hoon kway is just like ban mian, except the noodles are thicker and chewier. Mine from <b>Nee Soon Fish Head Mee Hoon #01-154</b> hit the spot.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1396,7 +1409,7 @@ var geojson = [
       coordinates: [103.77774499999998, 1.4442489]
     },
     properties: {
-      "description": "<b>Marsiling Lane</b><br><i>Blks 20/21 Marsiling Lane, 730020/730021</i><hr>I will tell you that the first time I visited Marsiling Lane way up in the northern reaches of our island home that I had not but one hour before finished a bowl of mee hoon kway at Chong Pang. So? I promptly doubled down with a bowl of ban mian from <b>Handmade Mee Hoon Kueh #01-15</b>.",
+      "description": "<b>Marsiling Lane</b><br><i>Blks 20/21 Marsiling Lane, 730020/730021</i><br><a href='https://www.youtube.com/watch?v=jcQ8SmSZSf0&feature=youtu.be&t=4m2s' target='_blank'>The Great Singapore Hawker Countdown: 3 more days, 6 more hawker centres</a><hr>I will tell you that the first time I visited Marsiling Lane way up in the northern reaches of our island home that I had not but one hour before finished a bowl of mee hoon kway at Chong Pang. So? I promptly doubled down with a bowl of ban mian from <b>Handmade Mee Hoon Kueh #01-15</b>.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1409,7 +1422,7 @@ var geojson = [
       coordinates: [103.88709799999992, 1.327638]
     },
     properties: {
-      "description": "<b>Circuit Road Blk 80</b><br><i>Blk 80 Circuit Road, 370080</i><hr>So many things to say about epok epok and its relationship to the curry puff. Confusion reigns, my friends. Which one is which? The big flaky triangle of yellow-orange dough concealing a bit of meat or potato? Is that epok epok? Or the half-moons of dough, less flaky, crimped at the edges, likewise concealing egg, potato, tuna, what have you? I settled this question at Blk 80 Circuit Road with the help of a friend. If your hawker is Malay, then we can say with certainty that the big golden triangle is a curry puff and the smaller half-moon is epok epok (helpful mnemonic: epok epok sounds like ewok, the little furry guys from Star Wars: Return of the Jedi, and both ewoks and epok epok are awesome). Thank you, <b>Madina Nasi Padang #02-04</b>, for providing the comestibles that inspired our investigation.",
+      "description": "<b>Circuit Road Blk 80</b><br><i>Blk 80 Circuit Road, 370080</i><br><a href='https://www.youtube.com/watch?v=-vxd0lTJ5dw' target='_blank'>The Great Singapore Hawker Countdown: 2 more days, 3 more hawker centres</a><hr>So many things to say about epok epok and its relationship to the curry puff. Confusion reigns, my friends. Which one is which? The big flaky triangle of yellow-orange dough concealing a bit of meat or potato? Is that epok epok? Or the half-moons of dough, less flaky, crimped at the edges, likewise concealing egg, potato, tuna, what have you? I settled this question at Blk 80 Circuit Road with the help of a friend. If your hawker is Malay, then we can say with certainty that the big golden triangle is a curry puff and the smaller half-moon is epok epok (helpful mnemonic: epok epok sounds like ewok, the little furry guys from Star Wars: Return of the Jedi, and both ewoks and epok epok are awesome). Thank you, <b>Madina Nasi Padang #02-04</b>, for providing the comestibles that inspired our investigation.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1422,7 +1435,7 @@ var geojson = [
       coordinates: [103.88538300000005, 1.32362]
     },
     properties: {
-      "description": "<b>Circuit Road Blk 89</b><br><i>Blk 89 Circuit Road, 370089</i><hr><b>Delisnacks #01-129</b>, one stall among many in this prolific chain, once sold me pisang goreng and sesame fritters that I very much enjoyed. Thank you, Delisnacks. And don&rsquo;t stress over whether it&rsquo;s &ldquo;pisang goreng&rdquo; or &ldquo;goreng pisang&rdquo;. Both are acceptable. Such is NOT the case for &ldquo;otak otak&rdquo; v. &ldquo;otah otah&rdquo;, though (the former is correct, the latter not at all)!",
+      "description": "<b>Circuit Road Blk 89</b><br><i>Blk 89 Circuit Road, 370089</i><br><a href='https://youtu.be/-vxd0lTJ5dw?t=4m52s' target='_blank'>The Great Singapore Hawker Countdown: 2 more days, 3 more hawker centres</a><hr><b>Delisnacks #01-129</b>, one stall among many in this prolific chain, once sold me pisang goreng and sesame fritters that I very much enjoyed. Thank you, Delisnacks. And don&rsquo;t stress over whether it&rsquo;s &ldquo;pisang goreng&rdquo; or &ldquo;goreng pisang&rdquo;. Both are acceptable. Such is NOT the case for &ldquo;otak otak&rdquo; v. &ldquo;otah otah&rdquo;, though (the former is correct, the latter not at all)!",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1435,7 +1448,7 @@ var geojson = [
       coordinates: [103.88692500000002, 1.320653]
     },
     properties: {
-      "description": "<b>Aljunied Ave 2 Blk 117</b><br><i>Blk 117 Aljunied Ave 2, 380117</i><hr>Chinese vegetarian food, as a discipline, is inadequately understood by the foodie crew, myself included. <b>Rong Xiang Vegetarian Food #01-17</b> makes convincing meatless ngoh hiang, serves it over noodles, and covers the whole thing in curry that any meat-eater would enjoy.",
+      "description": "<b>Aljunied Ave 2 Blk 117</b><br><i>Blk 117 Aljunied Ave 2, 380117</i><br><a href='https://youtu.be/-vxd0lTJ5dw?t=7m8s' target='_blank'>The Great Singapore Hawker Countdown: 2 more days, 3 more hawker centres</a><hr>Chinese vegetarian food, as a discipline, is inadequately understood by the foodie crew, myself included. <b>Rong Xiang Vegetarian Food #01-17</b> makes convincing meatless ngoh hiang, serves it over noodles, and covers the whole thing in curry that any meat-eater would enjoy.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1448,7 +1461,7 @@ var geojson = [
       coordinates: [103.91412000000003, 1.332925]
     },
     properties: {
-      "description": "<b>Bedok Reservoir</b><br><i>Blk 630 Bedok Reservoir Road, 470630</i><hr>The white carrot cake from <b>Xing Li Shou Shi #01-10</b> was excellent, but I was improperly ticketed by the parking police. Worth it!",
+      "description": "<b>Bedok Reservoir</b><br><i>Blk 630 Bedok Reservoir Road, 470630</i><br><a href='https://www.youtube.com/watch?v=_sL8PVEyTEc' target='_blank'>The Great Singapore Hawker Countdown: 1 more day, 1 more hawker centre</a><hr>The white carrot cake from <b>Xing Li Shou Shi #01-10</b> was excellent, but I was improperly ticketed by the parking police. Worth it!",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
@@ -1461,7 +1474,7 @@ var geojson = [
       coordinates: [103.91598599999998, 1.305719]
     },
     properties: {
-      "description": "<b>Marine Terrace</b><br><i>Blk 50A Marine Terrace, 441050</i><hr>I showed up at Marine Terrace on 18 August, 2016, to find thousands of people crowding around the plaza facing the road and lining said road for hundreds of feet. Mr. Joseph Schooling himself was about to make a stop on his welcome-home parade. We stayed by the road just until his bus pulled up, then bolted for the food centre. As we enjoyed our dumpling noodles from <b>Tanjong Rhu Wanton Noodle #01-296</b>, Schooling was busy greeting the fans. When we finished our meal, we stood up, took about five steps towards the outside, and all of a sudden a wave of people came around the corner. Schooling, surrounded by eight-or-so security dudes, was in the food centre. As Olympic gold medallists know, the food centre is where it&rsquo;s at.",
+      "description": "<b>Marine Terrace</b><br><i>Blk 50A Marine Terrace, 441050</i><br><a href='https://www.youtube.com/watch?v=_sL8PVEyTEc&feature=youtu.be&t=1m51s' target='_blank'>The Great Singapore Hawker Countdown: 1 more day, 1 more hawker centre</a><hr>I showed up at Marine Terrace on 18 August, 2016, to find thousands of people crowding around the plaza facing the road and lining said road for hundreds of feet. Mr. Joseph Schooling himself was about to make a stop on his welcome-home parade. We stayed by the road just until his bus pulled up, then bolted for the food centre. As we enjoyed our dumpling noodles from <b>Tanjong Rhu Wanton Noodle #01-296</b>, Schooling was busy greeting the fans. When we finished our meal, we stood up, took about five steps towards the outside, and all of a sudden a wave of people came around the corner. Schooling, surrounded by eight-or-so security dudes, was in the food centre. As Olympic gold medallists know, the food centre is where it&rsquo;s at.",
       'marker-color': '#09E2F4',
       'marker-size': 'medium',
       'marker-symbol': 'restaurant'
