@@ -92,14 +92,14 @@ var mapSimple = L.mapbox.map('map_simple', 'mapbox.streets', {
         position: 'bottomright'
     }
 })
-  .setView([55.755826,37.6173], 12);
+  .setView([62.593341,97.207031], 8);
 var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapSimple);
 
 mapSimple.legendControl.addLegend(document.getElementById('legend').innerHTML);
 mapSimple.on('click', function(e){
     var zoom = mapSimple.getZoom();
     if (zoom == 12) {
-    mapSimple.setView([1.355, 103.81256104]); }
+    mapSimple.setView([55.755826,37.6173]); }
 });
 
 
