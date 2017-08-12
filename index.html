@@ -37,6 +37,40 @@
     left: 0px;
     top: 5px;
     }
+    
+    #msk {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        width: 200px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #FFF;
+        left: 50px;
+        top: 50px;
+        background: #0080A3;
+    }
+
+#rus {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        width: 200px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #FFF;
+        left: 50px;
+        top: 100px;
+        background: #0080A3;
+    }
   </style>
 </head>
 <body>
@@ -68,6 +102,8 @@
 
 <div id='map'></div>
 <div id='map_simple' class='map'> </div>
+<button onclick='msk()' id='msk'>Москва</button>
+<button onclick='rus()' id='rus'>Россия</button>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
 var filters = document.getElementById('filters');
