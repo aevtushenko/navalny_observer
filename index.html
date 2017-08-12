@@ -179,7 +179,7 @@
 <button onclick='kzn()' id='kzn'>Татарстан</button>
 <button onclick='nsk()' id='nsk'>Новосибирская обл.</button>
 <button onclick='rus()' id='rus'>Россия</button>
-<button id='res'></button>
+<button id='res'><b>Результаты</b><hr><b>Явка:</b> 14909988<br><b>Годных бюллетеней:</b> 13089376<br><b>Навальный:</b> 33.40%<br><b>Путин:</b> 30.43%<br><b>Зюганов:</b> 24.30%<br><b>Жириновский:</b> 11.86%</button>
 <script>
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
@@ -409,7 +409,7 @@ function spb() {
 function kzn() {
     mapSimple.setView([55.830431,49.066081],12);
     var elem = document.getElementById("res");
-    elem.value = "<b>Результаты</b><hr><b>Явка:</b> 272149<br><b>Годных бюллетеней:</b> 249534<br><b>Навальный:</b> 38.40%<br><b>Путин:</b> 33.43%<br><b>Зюганов:</b> 19.30%<br><b>Жириновский:</b> 8.86%";
+    elem.data = "<b>Результаты</b><hr><b>Явка:</b> 272149<br><b>Годных бюллетеней:</b> 249534<br><b>Навальный:</b> 38.40%<br><b>Путин:</b> 33.43%<br><b>Зюганов:</b> 19.30%<br><b>Жириновский:</b> 8.86%";
 }
 
 function nsk() {
@@ -420,7 +420,7 @@ function nsk() {
 function rus() {
     mapSimple.setView([62.593341,97.207031], 3);
     var elem = document.getElementById("res");
-    elem.value = "<b>Результаты</b><hr><b>Явка:</b> 14909988<br><b>Годных бюллетеней:</b> 13089376<br><b>Навальный:</b> 33.40%<br><b>Путин:</b> 30.43%<br><b>Зюганов:</b> 24.30%<br><b>Жириновский:</b> 11.86%";
+    elem.data = "<b>Результаты</b><hr><b>Явка:</b> 14909988<br><b>Годных бюллетеней:</b> 13089376<br><b>Навальный:</b> 33.40%<br><b>Путин:</b> 30.43%<br><b>Зюганов:</b> 24.30%<br><b>Жириновский:</b> 11.86%";
 }
 
 </script>
