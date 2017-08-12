@@ -87,12 +87,12 @@ var geojson = [
 ];
 
 var mapSimple = L.mapbox.map('map_simple', 'mapbox.streets', {
-    minZoom: 4,
+    minZoom: 3,
     legendControl: {
         position: 'bottomright'
     }
 })
-  .setView([62.593341,97.207031], 4);
+  .setView([62.593341,97.207031], 3);
 var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapSimple);
 
 mapSimple.legendControl.addLegend(document.getElementById('legend').innerHTML);
