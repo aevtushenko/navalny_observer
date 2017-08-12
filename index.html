@@ -188,17 +188,12 @@ mapSimple.legendControl.addLegend(document.getElementById('legend').innerHTML);
 
 
 function msk() {
-    mapSimple.flyTo({
-        center: [55.755826,37.6173],
-        zoom: 12,
-    });
+    mapSimple.setView([55.755826,37.6173],12);
+
 }
 
 function rus() {
-    mapSimple.flyTo({
-        center: [62.593341,97.207031],
-        zoom: 3,
-    });
+    mapSimple.setView([62.593341,97.207031], 3);
 }
 
 </script>
