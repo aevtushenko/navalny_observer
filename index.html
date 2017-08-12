@@ -41,7 +41,7 @@
 </head>
 <body>
   <div id='legend' style='display:none;'>
-  <strong>Победил:</strong>
+  <strong>Лидер голосования:</strong>
   <nav class='legend clearfix'>
     
   <div class="input-color">
@@ -72,7 +72,18 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
 var filters = document.getElementById('filters');
 var geojson = [
-
+{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [37.696152, 55.788157]
+    },
+    properties: {
+      "description": "<b>Главный избирательный участок</b><br><i>В тридевятом царстве, в тридесятом государстве</i><hr>Навальный 34%<br>Путин 29%<br>Зюганов 12%<br>Жириновский 10%<br>Против всех 15%",
+      'marker-color': '#FF3300',
+      'marker-size': 'medium'
+    }
+  },
 ];
 
 var mapSimple = L.mapbox.map('map_simple', 'mapbox.streets', {
