@@ -50,8 +50,58 @@
         font-size: 12px;
         text-align: center;
         color: #FFF;
-        left: 50px;
-        top: 50px;
+        right: 20px;
+        top: 20px;
+        background: #0080A3;
+    }
+    
+    #spb {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        width: 200px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #FFF;
+        right: 20px;
+        top: 70px;
+        background: #0080A3;
+    }
+    #kzn {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        width: 200px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #FFF;
+        right: 20px;
+        top: 120px;
+        background: #0080A3;
+    }
+    
+    #nsk {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        width: 200px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #FFF;
+        right: 20px;
+        top: 170px;
         background: #0080A3;
     }
 
@@ -67,8 +117,8 @@
         font-size: 12px;
         text-align: center;
         color: #FFF;
-        left: 50px;
-        top: 100px;
+        right: 20px;
+        top: 220px;
         background: #0080A3;
     }
   </style>
@@ -103,6 +153,9 @@
 <div id='map'></div>
 <div id='map_simple' class='map'> </div>
 <button onclick='msk()' id='msk'>Москва</button>
+<button onclick='spb()' id='spb'>Санкт-Петербург</button>
+<button onclick='kzn()' id='kzn'>Татарстан</button>
+<button onclick='nsk()' id='nsk'>Новосибирская обл.</button>
 <button onclick='rus()' id='rus'>Россия</button>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWV2dHVzaGVua28iLCJhIjoiY2lvdjZ5dzJ0MDB2MHR6bTVoeWM4cXA3ZSJ9.aDNKdKtfrG6YVLATPWfVfw';
